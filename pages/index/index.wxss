@@ -68,9 +68,7 @@ button {
   top: 168px;
   bottom: 65.07%; */
 }
-
-element.style {
-  width: 8vw;
-  height: 4vh;
+.picker{
+  padding: 13px;
+  background-color: #FFFFFF;
 }
-

@@ -4,12 +4,14 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
+    index: 0,
+    multiArray: [['Swimming', 'Yoga'], ['0-2', '2-6', '6-8'], ['Jingan', 'Xuhui']],
+    objectMultiArray: [
+      [{id: 0, name: 'Swimming'}, {id: 1, name: 'Yoga'}
+      ], [{id: 0, name: '0-2'}, {id: 1, name: '2-6'},{id: 2, name: '6-8'}], [{id: 0,
+name: 'Jingan'},{id: 1, name: 'Xuhui'}]],},
+  
+//事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
