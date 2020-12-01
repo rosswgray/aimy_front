@@ -3,11 +3,14 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
+  "usingComponents": {
+    "card": "/components/card/card"
+  },
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#4A7FB0",
+    "navigationBarTitleText": "Aimee",
+    "navigationBarTextStyle":"white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
