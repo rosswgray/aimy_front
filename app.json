@@ -1,7 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "usingComponents": {
     "card": "/components/card/card"
@@ -13,5 +12,22 @@
     "navigationBarTextStyle":"white"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+     {
+       "pagePath": "pages/index/index",
+       "iconPath": "pages/images/Search.png",
+       "selectedIconPath": "pages/images/Search.png",
+       "text": "Home"
+     },
+     {
+      "pagePath": "pages/index/index",
+      "iconPath": "pages/images/Search.png",
+      "selectedIconPath": "pages/images/Search.png",
+      "text": "Home"
+    }
+   ]
+ }
+  
 }
