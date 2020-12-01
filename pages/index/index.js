@@ -26,9 +26,10 @@ Page({
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/`,
       success: function(res) {
-        const index = res.data.index
-        page.setData({ index: index.slice(0,10) })
-        console.log(index)
+        console.log(res)
+        const activities = res.data.activities
+        page.setData({ activities: activities.slice(0,20) })
+        console.log(activities)
       }
       })
     }, 
