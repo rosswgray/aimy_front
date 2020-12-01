@@ -1,0 +1,76 @@
+.card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 650rpx;
+  margin-left: 54rpx;
+  border-radius: 10rpx;
+  margin-top: 20px;
+}
+
+.image {
+  height: 250rpx;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-and-price {
+  display: flex;
+  position: relative;
+}
+
+.activity-price{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  color: #4A7FB0;
+  font-weight: bold;
+  background-color: white;
+  padding: 5rpx 25rpx;
+  border-radius: 10rpx;
+}
+
+.card-info {
+  display: flex;
+  padding: 20rpx;
+  justify-content: space-between;
+}
+
+.activity-title-provider {
+  max-width: 450rpx;
+}
+
+.activity-title .ellipsis {
+  font-size: 35rpx;
+  font-weight: bold;
+  max-width: 315px;
+  
+}
+
+.provider-name{
+  font-size: 12px;
+  opacity: .7;
+  margin: 5rpx 0 0 0;
+}
+
+.activity-log {
+  align-items: right;
+}
+
+.date {
+  font-size: 20rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.capacity {
+  font-weight: bolder;
+  font-size: 30rpx;
+  color: #4A7FB0;
+}
+
+.location {
+  font-size: small;
+  font-weight: bold;
+}

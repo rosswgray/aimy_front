@@ -1,3 +1,4 @@
+
 <view class="banner">
   <image class="banner-image" style="width: 100vw; height: 30vh;" mode="aspectFill" src="../images/banner.jpg"> 
     <view class="image-child">

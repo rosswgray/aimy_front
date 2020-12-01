@@ -12,6 +12,7 @@ Page({
 name: 'Jingan'},{id: 1, name: 'Xuhui'}]],},
   
 //事件处理函数
+
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'

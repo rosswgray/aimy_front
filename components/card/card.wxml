@@ -1,0 +1,19 @@
+<!-- activity card -->
+<view data-id='{{activity.id}}' bindtap='goToShow'class="card">
+  <view class="img-and-price">
+    <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
+      placeholder="Child Development Activity" 
+      style="flex-shrink: 0;"></image>
+    <text class="activity-price">¥{{activity.price}}</text>
+  </view>
+    <view class="card-info">
+      <view class="activity-title-provider">
+        <view class="activity-title>">{{activity.title}}</view>
+        <view class="provider-name"> by {{activity.organizer.name}}</view>
+      </view>
+      <view class="activity-log">
+        <view class="date"> {{activity.date}}</view>
+        <view class="location">{{activity.location}}</view>
+      </view>
+  </view>
+</view>
