@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    host: 'https://aimy.wogengapp.cn/api/v1/',
+    // host: 'http://localhost:3000/',
   }
 })
