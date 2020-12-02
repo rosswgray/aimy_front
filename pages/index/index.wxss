@@ -1,5 +1,7 @@
 
-
+.banner_search {
+  position: relative;
+}
 button {
   /* background-color: #6E62FF; */
   color: white;
@@ -10,6 +12,7 @@ button {
 .banner {
   width: 100vw; 
   height: 30vh;
+ 
 }
 
 .banner-image {
@@ -18,8 +21,8 @@ button {
 
 .image-child {
   position: absolute;
-  bottom: 10rpx;
-  left: 20rpx;
+  bottom: 254rpx;
+  left: 50rpx;
 }
 
 .search-bar {
@@ -51,6 +54,7 @@ button {
   position:absolute; */
   width: 88vw;
   height: 5vh;
+
 }
 
 .form {
