@@ -24,10 +24,10 @@
        "text": "Explore"
      },
      {
-      "pagePath": "pages/profile/profile",
+      "pagePath": "pages/show/show",
       "iconPath": "pages/images/profile.png",
       "selectedIconPath": "pages/images/profile.png",
-      "text": "Profile"
+      "text": "Activity"
     }
    ]
  }
