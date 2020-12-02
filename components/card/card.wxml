@@ -4,7 +4,7 @@
     <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
       style="flex-shrink: 0;"></image>
-    <text class="activity-price">¥{{activity.price}}</text>
+    <!-- <text class="activity-price">¥{{activity.price}}</text> -->
   </view>
     <view class="card-info">
       <view class="activity-title-provider">
