@@ -1,2 +1,48 @@
-<!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+<!-- SHOW PAGE IMAGE -->
+<view>
+  <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
+      placeholder="Child Development Activity" 
+      style="flex-shrink: 0;"></image>
+</view>
+
+
+
+<!-- ACTIVITY TITLE -->
+<!-- <view class="activity-title">Activity Title</view> -->
+<view class="activity-title>">{{activity.title}}</view>
+
+
+
+<!-- ACTIVITY LOGISTICS -->
+<view>
+  <view class="activity-log">  
+      <view class="date">
+        <view class="date"> {{activity.date}}</view>
+        <!-- <view>Tomorrow</view>
+        <view>09:00 AM - 13:00 PM</view> -->
+      </view>
+        <view class="location">{{activity.location}}</view>
+        <!-- <view class="location">188 Shannxi North Road</view>
+        <view class="location">地址：陕西北路188号</view> -->
+      </view>
+</view>
+
+
+<!-- INSTRUCTOR INFO -->
+<view class="instructor-view">
+  <image class="instructor-avatar" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/cveneziani"/>
+  
+  <view>
+    <text class="instructor-name">{{activity.organizer.name}}</text>
+    <!-- <view class="instructor-name">Brigita</view> -->
+    <view>📞 182-888-8888</view>
+  </view>
+</view>
+
+<!-- ACTIVITY DESCRIPTION -->
+<view class="activity-description">
+  <view class="description-h2">Description</view>
+  <!-- <text class="description-p">text text text</text> -->
+  <text class="description-p">{{description}}</text>
+</view>
+
