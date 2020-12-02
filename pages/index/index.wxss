@@ -10,6 +10,7 @@ button {
 .banner {
   width: 100vw; 
   height: 30vh;
+  position: absolute;
 }
 
 .banner-image {
