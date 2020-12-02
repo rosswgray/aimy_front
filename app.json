@@ -24,7 +24,7 @@
        "text": "Explore"
      },
      {
-      "pagePath": "pages/show/show",
+      "pagePath": "pages/profile/profile",
       "iconPath": "pages/images/profile.png",
       "selectedIconPath": "pages/images/profile.png",
       "text": "Activity"
