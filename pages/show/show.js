@@ -11,10 +11,6 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-
-  },
-
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -39,8 +35,21 @@ Page({
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
-
+  onLoad: function (options) {
+    const page = this
+    const id = options.id
+  
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/activities/${id}`,
+      success: function (res) {
+        console.log("READ", res)
+        const activity = res.data
+        // console.log(activity)
+        page.setData({
+          activity: activity
+        })
+      }
+    })
   },
 
   /**
