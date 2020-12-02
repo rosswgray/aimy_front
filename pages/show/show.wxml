@@ -23,7 +23,10 @@
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
         <view class="location">188 Shannxi North Road</view>
-        <view class="location">地址：陕西北路188号</view>
+        <view class="address">
+          <view class="location">地址：陕西北路188号</view>
+          <button class="btn-map" bindtap="goToMap"> View map </button>
+        </view>
       </view>
 </view>
 

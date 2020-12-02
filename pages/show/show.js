@@ -8,6 +8,13 @@ Page({
 
   },
 
+   goToMap: function() {
+    wx.navigateTo({
+      url: '/pages/map/map',
+    })
+  },
+
+
   /**
    * Lifecycle function--Called when page load
    */
