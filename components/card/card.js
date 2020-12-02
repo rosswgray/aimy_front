@@ -22,10 +22,16 @@ Component({
   methods: {
     goToShow: function(event) {
       let id = event.currentTarget.dataset.id
-      console.log("testingshow", event, id)
+      console.log("testingshow", id)
+      // wx.navigateTo({
+      //   url: `pages/show/show?id=${id}`
+      // })
       wx.navigateTo({
-        url:  `pages/show/show?id=${id}`
+        url: `/pages/show/show?id=${id}`,
       })
+      // wx.reLaunch({
+      //   url:  `pages/show/show?id=${id}`
+      // })
     },
   }  
 })

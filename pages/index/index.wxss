@@ -30,6 +30,7 @@ button {
   flex-direction: column;
   /* padding: 5px; */
   align-items: center;
+  padding-top: 16rpx;
 }
 
 .btn-search {
