@@ -1,5 +1,5 @@
 <!-- ACTIVITY CARD -->
-<view data-id='{{activity.id}}' bindtap='goToShow'class="card">
+<view data-id='{{activity.id}}' bindtap='goToShow' class="card">
   <view class="img-and-price">
     <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 

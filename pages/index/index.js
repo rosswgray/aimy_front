@@ -14,9 +14,10 @@ Page({
   },
   
 
-  submitParams: function(event) {
+  search: function(event) {
+    console.log("checking search", event)
     const page = this;
-    const query = event.detail.value.input
+    const query = event.detail.value
     console.log(query)
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities?query=${query}`,

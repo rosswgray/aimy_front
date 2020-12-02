@@ -21,10 +21,10 @@ Component({
 
   methods: {
     goToShow: function(event) {
-      const id = event.currentTarget.dataset.id
-      console.log(id)
+      let id = event.currentTarget.dataset.id
+      console.log("testingshow", event, id)
       wx.navigateTo({
-        url:  `pages/show/show?id=${id}`,
+        url:  `pages/show/show?id=${id}`
       })
     },
   }  
