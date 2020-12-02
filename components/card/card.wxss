@@ -19,7 +19,7 @@
   position: relative;
 }
 
-.activity-price{
+/* .activity-price{
   position: absolute;
   right: 15px;
   top: 15px;
@@ -29,7 +29,7 @@
   background-color: white;
   padding: 5rpx 25rpx;
   border-radius: 10rpx;
-}
+} */
 
 .card-info {
   display: flex;
