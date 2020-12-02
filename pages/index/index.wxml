@@ -17,7 +17,8 @@
   <form bindsubmit="submitParams" >
     <view class="form">
       <input class="weui-input" name="input" placeholder="Find an activity" /> 
-       <image class="seach_image" mode="aspectFill" src="../images/Search.png"></image>
+      <button class="btn-search" form-type="submit">Search</button>
+       <!-- <image class="seach_image" mode="aspectFill" src="../images/Search.png"></image> -->
     
     </view>
   </form>

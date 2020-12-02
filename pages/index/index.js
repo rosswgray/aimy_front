@@ -13,6 +13,23 @@ Page({
     ]
   },
   
+
+  submitParams: function(event) {
+    const page = this;
+    const query = event.detail.value.input
+    console.log(query)
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/activities?query=${query}`,
+      success: function(res) {
+        if (res.data) {
+          page.setData({activities: res.data.activities})}
+        // else {
+        //   page.setData({errorMessage: "Sorry, no result found"})
+        // }
+        console.log(222, res)
+      }
+    })
+  },
 //事件处理函数
 
   bindViewTap: function() {

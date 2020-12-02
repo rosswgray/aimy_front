@@ -21,7 +21,7 @@ button {
 
 .image-child {
   position: absolute;
-  bottom: 254rpx;
+  top: 25rpx;
   left: 50rpx;
 }
 
@@ -33,12 +33,12 @@ button {
 }
 
 .btn-search {
-  /* background-color: #14E3D3; */
+  background-color: #14E3D3;
   width: 130rpx;
   height: 60rpx;
   font-size: 22rpx;
   align-items: center;
-  /* padding-bottom: 30rpx; */
+  padding-bottom: 30rpx;
 }
 .form {
   display:flex;
