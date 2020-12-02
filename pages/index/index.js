@@ -22,7 +22,6 @@ Page({
   }, 
   onLoad: function (options) {
     const page = this; 
-    console.log("checking")
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/`,
       success: function(res) {
