@@ -34,7 +34,7 @@ button {
 
 .btn-search {
   background-color: #14E3D3;
-  width: 130rpx;
+  width: 60rpx;
   height: 60rpx;
   font-size: 22rpx;
   align-items: center;
@@ -43,6 +43,7 @@ button {
 .form {
   display:flex;
   flex-direction: row;
+  width: 600rpx;
 }
 .weui-input {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
