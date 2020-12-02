@@ -1,1 +1,67 @@
 /* pages/show/show.wxss */
+.image {
+  height: 250rpx;
+  width: 100%;
+  object-fit: cover;
+}
+
+.show-image {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
+}
+
+.activity-title {
+  font-size: 45rpx;
+  color: #4A7FB0;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.activity-log {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.date {
+  font-size: 30rpx;
+  font-weight: lighter;
+  margin-bottom: 20rpx;
+}
+
+.location {
+  font-size: 30rpx;
+  font-weight: lighter;
+}
+
+.instructor-view {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.instructor-avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.instructor-name {
+  font-size: 40rpx;
+  color: #4A7FB0;
+  font-weight: bold;
+}
+
+.activity-description {
+  padding: 20px;
+}
+
+.description-h2 {
+  font-size: 40rpx;
+  color: #4A7FB0;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.description-p {
+  font-size: 30rpx;
+}
