@@ -1,0 +1,15 @@
+<!--pages/profile/profile.wxml-->
+<view class="img-container">
+  <image src="https://us.123rf.com/450wm/kudryashka/kudryashka1609/kudryashka160900327/64881825-stock-vector-colorful-art-tree-for-your-design-vector-illustration.jpg?ver=6" class="img-background"></image>
+  <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+</view>
+
+<view class="divLine"></view>
+<view style="margin-bottom: 50rpx;" class="row-center">
+    <view class="my-bookings">My Bookings</view>
+</view>
+
+<!-- Beginning of User bookings -->
+<view class="card-container">
+  <card wx:for="{{activities}}" wx:key="index" activity="{{item}}" />
+</view>

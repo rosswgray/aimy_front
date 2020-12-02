@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/profile/profile"
   ],
   "usingComponents": {
     "card": "/components/card/card"
@@ -18,15 +19,15 @@
     "list": [
      {
        "pagePath": "pages/index/index",
-       "iconPath": "pages/images/home_icon.png",
-       "selectedIconPath": "pages/images/home_icon.png",
-       "text": "Home"
+       "iconPath": "pages/images/explore.png",
+       "selectedIconPath": "pages/images/explore.png",
+       "text": "Explore"
      },
      {
-      "pagePath": "pages/show/show",
+      "pagePath": "pages/profile/profile",
       "iconPath": "pages/images/profile.png",
       "selectedIconPath": "pages/images/profile.png",
-      "text": "Show"
+      "text": "Profile"
     }
    ]
  }
