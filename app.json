@@ -1,8 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/show/show",
-    "pages/profile/profile"
+    "pages/show/show"
   ],
   "usingComponents": {
     "card": "/components/card/card"
@@ -14,22 +13,6 @@
     "navigationBarTextStyle":"white"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "list": [
-     {
-       "pagePath": "pages/index/index",
-       "iconPath": "pages/images/explore.png",
-       "selectedIconPath": "pages/images/explore.png",
-       "text": "Explore"
-     },
-     {
-      "pagePath": "pages/profile/profile",
-      "iconPath": "pages/images/profile.png",
-      "selectedIconPath": "pages/images/profile.png",
-      "text": "Activity"
-    }
-   ]
- }
+  "sitemapLocation": "sitemap.json"
   
 }
