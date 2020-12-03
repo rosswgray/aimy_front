@@ -3,7 +3,7 @@
 <!-- Tree/Image Avatar -->
 <view class="img-container">
   <image src="https://us.123rf.com/450wm/kudryashka/kudryashka1609/kudryashka160900327/64881825-stock-vector-colorful-art-tree-for-your-design-vector-illustration.jpg?ver=6" class="img-background"></image>
-  <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+  <image class="avatar-large" alt="avatar-large" src="{{userInfo.avatarUrl}}" />
 </view>
 
 <!-- Bookings Bar -->
@@ -11,29 +11,6 @@
     <view class="my-bookings">My Bookings</view>
     <view class="my-favorites">My Favorites</view>
 </view>
-<!-- Log in Bar -->
-<!-- only displaying the stories and welcome message IF user is logged in -->
-<view wx:if="{{loggedIn}}">
-  <view class="welcome">Welcome {{userInfo.nickName}}</view>
-
-  <!-- looping through the local data 'stories' and creating HTML for each 'story'-->
-  <view wx:key='index' wx:for="{{profile}}" wx:for-item="profile">
-    <!-- <view class="card-product">
-    <image src="https://picsum.photos/200" />
-    <view class="card-product-infos">
-      <view class='h2'>{{story.name}}</view>
-      <text>{{story.text}}</text>
-    </view>
-    </view> -->
-  </view>
-
-  <button bindtap="changeData">Edit Classes</button>
-</view>
-<!-- <navigator url="/pages/post/post">Click here to start booking</navigator> -->
-<!-- IF user is not logged in, displaying the login button -->
-<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn">Please log in</button>
-
-
 
 
 <!-- User Bookings -->
@@ -47,3 +24,5 @@
       <!-- <button class="profile-button">Paid</button> -->
   <!-- </view> -->
 <!-- </view> -->
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
