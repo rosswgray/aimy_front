@@ -12,7 +12,7 @@ App({
     wx.login({
       success: res => {
         wx.request({
-          url: this.globalData.host + 'login',
+          url: that.globalData.host + 'api/v1/login',
           method: 'post',
           data: {
             code: res.code

@@ -32,10 +32,13 @@
 
 <view>
   <view class="activity-log">  
-      <view class="date">
+      <view class="date-and-book">
         <!-- <view class="date"> {{activity.date}}</view> -->
-        <view>Tomorrow</view>
-        <view>09:00 AM - 13:00 PM</view>
+        <view class="date">
+          <view>Tomorrow</view>
+          <view>09:00 AM - 13:00 PM</view>
+        </view>
+        <navigator url="#" class="booking-button">Book</navigator>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
@@ -71,6 +74,7 @@
 <!-- SESSIONS CARDS -->
 
 <view class="sessions-card-container">
+  <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" >
     <sessions-card activity="{{session}}" />
   </view>

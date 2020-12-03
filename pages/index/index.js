@@ -5,13 +5,21 @@ const app = getApp()
 
 Page({
   data: {
-    index: 0,
-    multiArray: [['Swimming', 'Yoga'], ['0-2', '2-6', '6-8'], ['Jingan', 'Xuhui']],
-    objectMultiArray: [
-      [{id: 0, name: 'Swimming'}, {id: 1, name: 'Yoga'}], 
-      [{id: 0, name: '0-2'}, {id: 1, name: '2-6'},{id: 2, name: '6-8'}], 
-      [{id: 0, name: 'Jingan'},{id: 1, name: 'Xuhui'}]
-    ]
+
+  },
+
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
   
   search: function(event) {
