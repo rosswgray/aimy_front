@@ -5,14 +5,23 @@ Page({
    * Page initial data
    */
   data: {
-
+  
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const page = this; 
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/activities/`,
+      success: function(res) {
+        console.log(res)
+        const activities = res.data.activities
+        page.setData({ activities: activities.slice(0,20) })
+        console.log(activities)
+      }
+      })
   },
 
   /**
