@@ -1,0 +1,94 @@
+/* components/sessions-card/sessions-card.wxss */
+
+
+.sessions-card {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 10px; */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 100%;
+ }
+
+ .img-info {
+   display: flex;
+   flex-grow: 1;
+ }
+
+
+ .instructor-avatar {
+  border-radius: 5px;
+  box-shadow: grey;
+  height: 75px;
+  width: 75px;
+}
+
+ .card-info {
+   padding: 20rpx;
+   /* margin: 5px; */
+ }
+
+.activity-title {
+  font-size: small;
+  font-weight: bolder;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+ .provider-name {
+   font-size: small;
+   font-weight: lighter;
+   line-height: 3rpx;
+ }
+
+ .date-time {
+   display: flex
+ }
+
+ .date {
+  font-size: 20rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  padding-right: 30rpx;
+}
+
+.time {
+  font-size: 20rpx;
+  font-weight: lighter;
+  margin-bottom: 10rpx;
+}
+ .right-box {
+  flex-shrink: 0;
+  display: flex;
+  padding: 20rpx 0;
+ }
+
+.div-line {
+  border-left: rgba(0, 0, 0, 0.1) 1px solid ;
+  margin-right: 10rpx;
+  /* margin: 15px 0px 15px 15px; */
+}
+
+ .activity-book {
+   margin: 20rpx;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ button {
+   background-color:  #0ea094;
+   color: white;
+   font-weight: bold;
+   font-size: 20rpx;
+ }
+
+ /* .card-pricing {
+  font-weight: bolder;
+   color: #2A7AF1;
+ } */
+
+
+ 

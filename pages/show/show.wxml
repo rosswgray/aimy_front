@@ -1,4 +1,6 @@
+
 <!-- SHOW PAGE IMAGE -->
+
 <view>
   <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
@@ -6,14 +8,28 @@
 </view>
 
 
+<!-- SWIPER  -->
+
+<!-- <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <view class="slider-parent">
+        <image src="{{item}}" class="slide-image" style="width: 100%; height: 400rpx;"/>
+     </view>
+    </swiper-item>
+  </block>
+</swiper> -->
+
 
 <!-- ACTIVITY TITLE -->
+
 <!-- <view class="activity-title">Activity Title</view> -->
 <view class="activity-title>">{{activity.title}}</view>
 
 
-
 <!-- ACTIVITY LOGISTICS -->
+
 <view>
   <view class="activity-log">  
       <view class="date">
@@ -25,27 +41,37 @@
         <view class="location">188 Shannxi North Road</view>
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
-          <button class="btn-map" bindtap="goToMap"> View map </button>
+          <view class="btn-div">
+            <button class="btn-map" bindtap="goToMap" style="background-color: #E5E5E5; color: white; font-size: 30rpx; width: 30px; border-radius: 10rpx;"> View Map </button>
+        </view>
         </view>
       </view>
 </view>
 
 
 <!-- INSTRUCTOR INFO -->
+
 <view class="instructor-view">
-  <image class="instructor-avatar" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/cveneziani"/>
-  
+  <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
   <view>
     <text class="instructor-name">{{activity.organizer.name}}</text>
-    <!-- <view class="instructor-name">Brigita</view> -->
     <view>📞 182-888-8888</view>
   </view>
 </view>
 
+
 <!-- ACTIVITY DESCRIPTION -->
+
 <view class="activity-description">
   <view class="description-h2">Description</view>
-  <!-- <text class="description-p">text text text</text> -->
   <text class="description-p">{{activity.description}}</text>
 </view>
 
+
+<!-- SESSIONS CARDS -->
+
+<view class="sessions-card-container">
+  <view wx:for="{{activity.sessions}}" wx:for-item="session" >
+    <sessions-card activity="{{session}}" />
+  </view>
+</view>

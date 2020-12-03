@@ -1,0 +1,31 @@
+<!--SESSIONS CARD-->
+
+<view data-id='{{activity.id}}' bindtap='goToShow' class="sessions-card">
+  <view class="img-info" style="flex-shrink: 0;">
+    <image mode="aspectFill" src="/pages/images/workout-coach.jpg" 
+      placeholder="Instructor Avatar" 
+      class="instructor-avatar" style="flex-shrink: 0;"></image>
+
+      <!-- <image mode="aspectFill" src="{{userInfo.avatarUrl}}" placeholder="Instructor Avatar" 
+      class="instructor-avatar" style="flex-shrink: 0;"></image> -->
+    
+    <view class="card-info">
+      <view class="activity-title" style="margin-bottom: 20rpx;">{{activity.title}}</view>
+      <view class="provider-name" style="margin-bottom: 10rpx;">{{activity.organizer.name}}</view>
+      <view class="date-time">
+        <view class="date">{{activity.date}}</view>
+        <view class="time">09:00 AM - 13:00 PM</view>
+    </view>
+    </view>
+  </view>
+  
+  <view class="right-box">
+    <view class="div-line"></view>
+    <view wx:if="{{isInstructor}}">I'm an teacher</view>
+    <view wx:else class="activity-book">
+        <view style="display: flex; justify-content: center;">
+          <button class="button" style="width: 15px">Book</button>
+        </view>
+    </view>
+  </view>
+</view>

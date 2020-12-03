@@ -9,6 +9,16 @@
   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
 }
 
+/* .home-banener-box .wx-swiper-dot{
+  width: 26rpx;
+  height: 8rpx;
+  border-radius:3rpx;
+  background: #ccc;
+}
+.home-banener-box .wx-swiper-dot-active{
+  background: #fff;
+} */
+
 .activity-title {
   font-size: 45rpx;
   color: #4A7FB0;
@@ -74,9 +84,18 @@
   align-items: center;
 }
 
-.btn-map {
+.btn-div {
+  width: 20px;
+}
+
+/* .btn-map {
   background-color: #F0E6E5;
   width: 30rpx;
   font-size: 20rpx;
   border-radius: 10rpx;
+} */
+
+
+.sessions-card-container {
+  margin: 2px 15px 2px 15px;
 }

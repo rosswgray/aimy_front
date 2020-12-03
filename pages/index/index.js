@@ -41,7 +41,8 @@ Page({
   onLoad: function (options) {
     const page = this; 
     wx.request({
-      url: `${getApp().globalData.host}api/v1/activities/`,
+      // url: `${getApp().globalData.host}api/v1/activities/`,
+      url: 'http://localhost:3000/api/v1/activities',
       success: function(res) {
         console.log(res)
         const activities = res.data.activities
