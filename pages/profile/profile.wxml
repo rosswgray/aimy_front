@@ -11,17 +11,39 @@
     <view class="my-bookings">My Bookings</view>
     <view class="my-favorites">My Favorites</view>
 </view>
+<!-- Log in Bar -->
+<!-- only displaying the stories and welcome message IF user is logged in -->
+<view wx:if="{{loggedIn}}">
+  <view class="welcome">Welcome {{userInfo.nickName}}</view>
+
+  <!-- looping through the local data 'stories' and creating HTML for each 'story'-->
+  <view wx:key='index' wx:for="{{profile}}" wx:for-item="profile">
+    <!-- <view class="card-product">
+    <image src="https://picsum.photos/200" />
+    <view class="card-product-infos">
+      <view class='h2'>{{story.name}}</view>
+      <text>{{story.text}}</text>
+    </view>
+    </view> -->
+  </view>
+
+  <button bindtap="changeData">Edit Classes</button>
+</view>
+<!-- <navigator url="/pages/post/post">Click here to start booking</navigator> -->
+<!-- IF user is not logged in, displaying the login button -->
+<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn">Please log in</button>
+
 
 
 
 <!-- User Bookings -->
-<view class="card-container">
+<!-- <view class="card-container">
   <view class="profile-card">
     <view class="title-date">
       <view class="title">Activity Title</view>
       <view class="date">2020-12-25</view>
     </view>
-      <button class="btn-book" bindtap="book"> Book </button>
+      <button class="btn-book" bindtap="book"> Book </button> -->
       <!-- <button class="profile-button">Paid</button> -->
-  </view>
-</view>
+  <!-- </view> -->
+<!-- </view> -->

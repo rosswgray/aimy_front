@@ -26,14 +26,14 @@
 </view>
 
 <!-- DROP DOWN MENU -->
-<!-- <view class="section">
-  <view class="section__title">Catagory</view>
+<view class="section">
+  <view class="section__title"></view>
   <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-    <view class="picker">
-      Click Here:{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-    </view>
+    <view class="picker"> Category{{multiArray[0][multiIndex[0]]}} </view>
+    <view class="picker"> Age Range{{multiArray[1][multiIndex[1]]}}</view>
+    <view class="picker"> District{{multiArray[2][multiIndex[2]]}} </view>
   </picker>
-</view> -->
+</view>
 
 <!-- CARDS -->
 <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
