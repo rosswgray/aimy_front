@@ -26,16 +26,43 @@
 </view>
 
 <!-- DROP DOWN MENU -->
-<view class="section">
+<!-- <view class="section">
   <view class="section__title"></view>
   <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-    <view class="picker"> Category{{multiArray[0][multiIndex[0]]}} </view>
-    <view class="picker"> Age Range{{multiArray[1][multiIndex[1]]}}</view>
-    <view class="picker"> District{{multiArray[2][multiIndex[2]]}} </view>
+    <view class="picker"> Date{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}{{multiArray[2][multiIndex[2]]}} </view>
+  </picker>
+</view> -->
+<view class="section">
+<!-- TIME SELECTOR -->
+<view class="section1">
+  <view class="section__title"></view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      DATE 🔽{{date}}
+    </view>
   </picker>
 </view>
 
-<!-- CARDS -->
+<!-- AGE SELECTOR -->
+<view class="section2">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      AGE 🔽{{array[index]}}
+    </view>
+  </picker>
+</view>
+<!-- AREA SELECTOR -->
+<view class="section3">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      DISTRICT 🔽{{array[index]}}
+    </view>
+  </picker>
+</view>
+</view>
+<!-- CARDS SELECTOR-->
 <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
   <card activity="{{activity}}" />
 </view>
