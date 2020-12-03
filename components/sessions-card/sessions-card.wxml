@@ -14,7 +14,7 @@
       <view class="provider-name">{{activity.organizer.name}}</view>
       <view class="date-time">
         <view class="date">{{activity.date}}</view>
-        <!-- <view class="time">{{09:00 AM - 13:00 PM}}</view> -->
+        <view class="time">{{start_hour}}:00 - {{end_hour}}:00</view>
     </view>
     </view>
   </view>
