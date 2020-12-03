@@ -21,6 +21,7 @@
       <view class="title">Activity Title</view>
       <view class="date">2020-12-25</view>
     </view>
-      <button class="profile-card-button">Paid</button>
+      <button class="btn-book" bindtap="book"> Book </button>
+      <!-- <button class="profile-button">Paid</button> -->
   </view>
 </view>

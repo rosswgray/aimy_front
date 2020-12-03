@@ -56,9 +56,11 @@
   font-size: 10px;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
   margin-bottom: 10px;
+  align-items: center;
 }
 .title-date {
   align-items: center;
+  padding-left: 10px;
 }
 
 .title {
@@ -73,11 +75,26 @@
   font-size: medium;
 }
 
-.profile-card-button {
+.btn-book {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: #0ea094;
+  color: white;
+  font-size: 45rpx;
+  border-radius: 3px; 
+  width: 116px;
+  height: 46px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 25px;
+  display: table-cell;
+}
+
+/* .profile-button {
   color: white;
   background-color: #AEC867;
   border-radius: 10rpx;
   width: 10px;
   height: 40px;
   align-items: right;
-}
+} */
+
