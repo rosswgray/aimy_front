@@ -78,7 +78,7 @@ button {
   padding: 13px;
   background-color: #FFFFFF;
   color: #979797;
-  font-weight: 500;
+  font-weight: 200;
   display: flex;
   text-align: center; 
 }
@@ -90,4 +90,8 @@ button {
 }
 .section3 {
   flex-grow: 1;
+}
+.icon-sm {
+  width: 21px;
+  height: 12px
 }

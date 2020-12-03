@@ -38,7 +38,8 @@
   <view class="section__title"></view>
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
-      DATE 🔽{{date}}
+     Date <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>
+       {{date}}
     </view>
   </picker>
 </view>
@@ -48,7 +49,7 @@
   <view class="section__title"></view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
-      AGE 🔽{{array[index]}}
+      Age <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
     </view>
   </picker>
 </view>
@@ -57,7 +58,7 @@
   <view class="section__title"></view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
-      DISTRICT 🔽{{array[index]}}
+      District <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
     </view>
   </picker>
 </view>

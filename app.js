@@ -8,7 +8,7 @@ App({
       success: res => {
         console.log("checking code", res.code)
         wx.request({
-          url: that.globalData.host + 'login',
+          url: that.globalData.host + 'api/v1/login',
           method: 'post',
           data: {
             code: res.code
@@ -43,7 +43,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    // host: 'https://aimy.wogengapp.cn/',
-    host: 'http://localhost:3000/',
+    host: 'https://aimy.wogengapp.cn/',
+    // host: 'http://localhost:3000/',
   }
 })

@@ -97,4 +97,70 @@
   height: 40px;
   align-items: right;
 } */
+.welcome {
+  padding-left:200prx;
+}
 
+/**index.wxss**/
+.container {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.tabs-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.tab-titles {
+  display: flex;
+  color: gray;
+}
+
+.tab-title {
+  text-align: center;
+  width: 50vw;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.active {
+  font-weight: 600;
+  color: black;
+  background-color: pink;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab-page {
+  background-color: pink;
+  flex-grow: 1;
+  padding: 50rpx 40rpx;
+  font-size: 20px;
+}

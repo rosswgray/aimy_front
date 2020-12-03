@@ -7,11 +7,31 @@
 </view>
 
 <!-- Bookings Bar -->
-<view class="line-container">
+<!-- <view class="line-container">
     <view class="my-bookings">My Bookings</view>
     <view class="my-favorites">My Favorites</view>
+</view> -->
+
+<!-- IF user is not logged in, displaying the login button -->
+<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn">Please log in</button>
+
+<view wx:if="{{loggedIn}}">
+  <view class="welcome">Welcome {{userInfo.nickName}}</view>
 </view>
 
+
+
+<!-- BOOKING BAR IRENE -->
+<view wx:if="{{loggedIn}}">
+<view class="tabs-container">
+  <view class="tab-titles">
+    <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Booking</view>
+    <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
+  </view>
+  <view class="tab-page" wx:if="{{activeTab == 0}}">My Booking</view>
+  <view class="tab-page" wx:if="{{activeTab == 1}}">My Favorites</view>
+</view>
+</view>
 
 <!-- User Bookings -->
 <!-- <view class="card-container">
@@ -25,4 +45,6 @@
   <!-- </view> -->
 <!-- </view> -->
 
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button> -->
+
+
