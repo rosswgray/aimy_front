@@ -1,17 +1,25 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    let that = this
+    console.log("checking url", that.globalData)
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log("checking code", res.code)
+        wx.request({
+          url: that.globalData.host + 'login',
+          method: 'post',
+          data: {
+            code: res.code
+          },
+          success: function(res){
+            console.log("testing login", res)
+          }
+        })
       }
     })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {

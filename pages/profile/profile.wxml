@@ -3,7 +3,7 @@
 <!-- Tree/Image Avatar -->
 <view class="img-container">
   <image src="https://us.123rf.com/450wm/kudryashka/kudryashka1609/kudryashka160900327/64881825-stock-vector-colorful-art-tree-for-your-design-vector-illustration.jpg?ver=6" class="img-background"></image>
-  <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+  <image class="avatar-large" alt="avatar-large" src="{{userInfo.avatarUrl}}" />
 </view>
 
 <!-- Bookings Bar -->
@@ -13,15 +13,16 @@
 </view>
 
 
-
 <!-- User Bookings -->
-<view class="card-container">
+<!-- <view class="card-container">
   <view class="profile-card">
     <view class="title-date">
       <view class="title">Activity Title</view>
       <view class="date">2020-12-25</view>
     </view>
-      <button class="btn-book" bindtap="book"> Book </button>
+      <button class="btn-book" bindtap="book"> Book </button> -->
       <!-- <button class="profile-button">Paid</button> -->
-  </view>
-</view>
+  <!-- </view> -->
+<!-- </view> -->
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>

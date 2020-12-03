@@ -1,16 +1,20 @@
 // pages/profile/profile.js
+const app = getApp()
 Page({
 
-  /**
-   * Page initial data
-   */
-  data: {
-  
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+
+  data: {
+
+  },
+
   onLoad: function (options) {
     const page = this; 
     wx.request({
