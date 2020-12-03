@@ -25,11 +25,18 @@
 <view wx:if="{{loggedIn}}">
 <view class="tabs-container">
   <view class="tab-titles">
-    <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Booking</view>
+    <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
     <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
   </view>
-  <view class="tab-page" wx:if="{{activeTab == 0}}">My Booking</view>
-  <view class="tab-page" wx:if="{{activeTab == 1}}">My Favorites</view>
+  <view class="tab-page" wx:if="{{activeTab == 0}}">
+    
+    <!-- <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
+     <card activity="{{activity}}" />
+    </view> -->
+
+cards here
+  </view>
+  <view class="tab-page" wx:if="{{activeTab == 1}}">card here</view>
 </view>
 </view>
 

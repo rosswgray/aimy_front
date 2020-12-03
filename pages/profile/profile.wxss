@@ -98,7 +98,8 @@
   align-items: right;
 } */
 .welcome {
-  padding-left:200prx;
+ text-align: center;
+ color: #4A7FB0
 }
 
 /**index.wxss**/
@@ -140,6 +141,7 @@
 .tab-titles {
   display: flex;
   color: gray;
+  font-weight: 200;
 }
 
 .tab-title {
@@ -154,12 +156,12 @@
 .active {
   font-weight: 600;
   color: black;
-  background-color: pink;
+  background-color: #F0E6E5;
   border-radius: 10px 10px 0 0;
 }
 
 .tab-page {
-  background-color: pink;
+  background-color: #F0E6E5;
   flex-grow: 1;
   padding: 50rpx 40rpx;
   font-size: 20px;
