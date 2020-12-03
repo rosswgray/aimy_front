@@ -47,3 +47,7 @@
 .picker {
   color: red;
 }
+.icon-sm {
+  width: 21px;
+  height: 12px
+}

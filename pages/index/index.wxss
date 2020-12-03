@@ -74,9 +74,24 @@ button {
   top: 168px;
   bottom: 65.07%; */
 }
-.picker{
+.section{
   padding: 13px;
   background-color: #FFFFFF;
-  color: #4A7FB0;
-  
+  color: #979797;
+  font-weight: 200;
+  display: flex;
+  text-align: center; 
+}
+.section1 {
+  flex-grow: 1;
+}
+.section2 {
+  flex-grow: 1;
+}
+.section3 {
+  flex-grow: 1;
+}
+.icon-sm {
+  width: 21px;
+  height: 12px
 }

@@ -12,7 +12,13 @@ Page({
 
 
   data: {
-
+    loggedIn: false,
+  },
+  logIn: function() {
+    console.log(this.data)
+    this.setData({userInfo: getApp().globalData.userInfo})
+    this.setData({loggedIn: true})
+    this.setData({activeTab:0})
   },
 
   onLoad: function (options) {
@@ -75,5 +81,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  switchTab: function(e) {
+    console.log("checing", e.currentTarget.dataset.tab)
+    this.setData({
+      activeTab: e.currentTarget.dataset.tab
+    })
   }
 })
