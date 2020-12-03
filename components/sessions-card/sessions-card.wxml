@@ -10,22 +10,20 @@
       class="instructor-avatar" style="flex-shrink: 0;"></image> -->
     
     <view class="card-info">
-      <view class="activity-title" style="margin-bottom: 20rpx;">{{activity.title}}</view>
-      <view class="provider-name" style="margin-bottom: 10rpx;">{{activity.organizer.name}}</view>
+      <view class="activity-title" style="margin-bottom: 6px;">{{activity.title}}</view>
+      <view class="provider-name">{{activity.organizer.name}}</view>
       <view class="date-time">
         <view class="date">{{activity.date}}</view>
-        <view class="time">09:00 AM - 13:00 PM</view>
+        <!-- <view class="time">{{09:00 AM - 13:00 PM}}</view> -->
     </view>
     </view>
   </view>
   
   <view class="right-box">
     <view class="div-line"></view>
-    <view wx:if="{{isInstructor}}">I'm an teacher</view>
+    <view wx:if="{{isInstructor}}">I'm an instructor!</view>
     <view wx:else class="activity-book">
-        <view style="display: flex; justify-content: center;">
-          <button class="button" style="width: 15px">Book</button>
-        </view>
+        <button class="button" style="width: 5px;">Book</button>
     </view>
   </view>
 </view>

@@ -38,12 +38,12 @@
         <view>09:00 AM - 13:00 PM</view>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
-        <view class="location">188 Shannxi North Road</view>
+      <view class="location">188 Shannxi North Road</view>
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
-          <view class="btn-div">
-            <button class="btn-map" bindtap="goToMap" style="background-color: #E5E5E5; color: white; font-size: 30rpx; width: 30px; border-radius: 10rpx;"> View Map </button>
-        </view>
+          
+            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 200rpx;" bindtap="goToMap" > VIEW MAP </button>
+    
         </view>
       </view>
 </view>

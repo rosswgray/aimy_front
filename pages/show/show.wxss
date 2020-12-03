@@ -27,6 +27,8 @@
 }
 
 .activity-log {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   margin-left: 10px;
 }
@@ -39,6 +41,15 @@
 
 .location {
   font-size: 30rpx;
+  font-weight: lighter;
+}
+
+.btn-map {
+  background-color: #E5E5E5;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  color: black;
   font-weight: lighter;
 }
 
@@ -80,21 +91,9 @@
 .address {
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-
-.btn-div {
-  width: 20px;
-}
-
-/* .btn-map {
-  background-color: #F0E6E5;
-  width: 30rpx;
-  font-size: 20rpx;
-  border-radius: 10rpx;
-} */
-
 
 .sessions-card-container {
   margin: 2px 15px 2px 15px;

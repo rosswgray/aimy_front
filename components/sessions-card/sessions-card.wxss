@@ -15,41 +15,42 @@
    flex-grow: 1;
  }
 
-
  .instructor-avatar {
   border-radius: 5px;
   box-shadow: grey;
-  height: 75px;
+  height: 100%;
   width: 75px;
 }
 
  .card-info {
-   padding: 20rpx;
+   padding: 19rpx;
    /* margin: 5px; */
  }
 
 .activity-title {
-  font-size: small;
+  font-size: 16px;
+  color: #4A7FB0;
   font-weight: bolder;
-  /* white-space: nowrap;
+  max-width: 38vw;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
 }
 
  .provider-name {
    font-size: small;
    font-weight: lighter;
-   line-height: 3rpx;
+   line-height: 10rpx;
  }
 
  .date-time {
-   display: flex
+   display: flex;
+   margin-top: 10px;
  }
 
  .date {
   font-size: 20rpx;
   font-weight: bold;
-  margin-bottom: 10rpx;
   padding-right: 30rpx;
 }
 
@@ -61,7 +62,7 @@
  .right-box {
   flex-shrink: 0;
   display: flex;
-  padding: 20rpx 0;
+  padding: 25rpx 10rpx;
  }
 
 .div-line {
@@ -82,7 +83,9 @@
    background-color:  #0ea094;
    color: white;
    font-weight: bold;
-   font-size: 20rpx;
+   font-size: 28rpx;
+   text-align: center;
+   padding-right: 110rpx;
  }
 
  /* .card-pricing {
