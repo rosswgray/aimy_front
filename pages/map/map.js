@@ -1,9 +1,9 @@
 Page({
   data: {
     markers: [{
-      iconPath: "/resources/others.png",
+      iconPath: "../images/location.png",
       id: 0,
-      latitude: 23.099994,
+      latitude: 23.10229,
       longitude: 113.324520,
       width: 50,
       height: 50
@@ -22,7 +22,7 @@ Page({
     }],
     controls: [{
       id: 1,
-      iconPath: '/resources/location.png',
+      iconPath: '../images/location.png',
       position: {
         left: 0,
         top: 300 - 50,
@@ -40,5 +40,24 @@ Page({
   },
   controltap(e) {
     console.log(e.controlId)
-  }
+  },
+
+  onLoad: function (options) {
+  console.log("Options", options)
+  const page = this
+  const id = options.id
+
+  wx.request({
+    url: `${getApp().globalData.host}api/v1/activities/${id}`,
+    success: function (res) {
+      console.log("READ", res)
+      const activity = res.data
+      // console.log(activity)
+      page.setData({
+        activity: activity
+      })
+    }
+  })
+}
+
 })

@@ -43,13 +43,14 @@ Page({
    * Lifecycle function--Called when page unload
    */
   onLoad: function (options) {
+    // console.log("Options", options)
     const page = this
     const id = options.id
   
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/${id}`,
       success: function (res) {
-        console.log("READ", res)
+        // console.log("READ", res)
         const activity = res.data
         // console.log(activity)
         page.setData({
