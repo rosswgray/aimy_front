@@ -12,7 +12,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#4A7FB0",
-    "navigationBarTitleText": "Aimee",
+    "navigationBarTitleText": "Aìmee",
     "navigationBarTextStyle":"white"
   },
   "style": "v2",
@@ -29,7 +29,7 @@
       "pagePath": "pages/profile/profile",
       "iconPath": "pages/images/profile.png",
       "selectedIconPath": "pages/images/profile.png",
-      "text": "Activity"
+      "text": "Profile"
     }
    ]
  }
