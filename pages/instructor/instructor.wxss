@@ -5,9 +5,14 @@
   align-items: center;
   height: 400rpx;
   display: flex;
+  flex-direction: column;
   position: relative;
 }
-
+.h1-name {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 147px;
+}
 .image {
   border-radius: 50%;
   width: 100rpx;
@@ -33,4 +38,8 @@
 .p {
   color: #979797;
   font-size: 14px;
+}
+.instruction-info {
+  padding-left: 50rpx;
+  padding-right: 50 rpx;
 }

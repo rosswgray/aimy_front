@@ -1,22 +1,19 @@
-<!--pages/instructor/instructor.wxml-->
 <view class="instructor-banner" style="background">
-  <!-- <image mode="aspectFill" src="../images/instructor.jpg"> </image> -->
-  <view class="h1"><text> Brigita</text></view>
   <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+  <view class="h1-name"><text> Brigita</text></view>
 </view>
 
 <view class="instruction-info">
-
-  <view class="h1"><text> Bio </text></view>
+  <view class="h1"><text> 🔽 Bio </text></view>
   <view class="p"><text> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</text></view>
 
-  <view class="h1"> <text> Qualifications & certifications </text></view>
+  <view class="h1"> <text> 🔽 Qualifications & certifications </text></view>
   <view class="p"> <text> QUALIFICATIONS AND CERTIFICATIONS
 
 -- 200 hr. Swimming instruction
 -- 350 hr. 1-1 classroom experience </text></view>
 
-  <text class="h1"> Upcoming sessions </text>
+  <text class="h1"> 🔽 Upcoming sessions </text>
 </view>
 
 <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
