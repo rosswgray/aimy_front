@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 
+
 Page({
   data: {
     index: 0,
@@ -13,7 +14,6 @@ Page({
     ]
   },
   
-
   search: function(event) {
     // console.log("checking search", event)
     const page = this;

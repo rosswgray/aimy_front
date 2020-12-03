@@ -1,26 +1,29 @@
 //app.js
 App({
+  
+  globalData: {
+    userInfo: null,
+    host: 'https://aimy.wogengapp.cn/',
+    // host: 'http://localhost:3000/',
+  },
+
+
   onLaunch: function () {
-    let that = this
-    console.log("checking url", that.globalData)
-    // 登录
     wx.login({
       success: res => {
-        console.log("checking code", res.code)
         wx.request({
-          url: that.globalData.host + 'login',
+          url: this.globalData.host + 'login',
           method: 'post',
           data: {
             code: res.code
           },
-          success: function(res){
+          success: (res) => {
             console.log("testing login", res)
           }
         })
       }
     })
 
-    // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -40,10 +43,5 @@ App({
         }
       }
     })
-  },
-  globalData: {
-    userInfo: null,
-    host: 'https://aimy.wogengapp.cn/',
-    // host: 'http://localhost:3000/',
   }
 })

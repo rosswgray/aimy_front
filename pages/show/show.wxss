@@ -9,6 +9,16 @@
   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
 }
 
+/* .home-banener-box .wx-swiper-dot{
+  width: 26rpx;
+  height: 8rpx;
+  border-radius:3rpx;
+  background: #ccc;
+}
+.home-banener-box .wx-swiper-dot-active{
+  background: #fff;
+} */
+
 .activity-title {
   font-size: 45rpx;
   color: #4A7FB0;
@@ -17,6 +27,8 @@
 }
 
 .activity-log {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   margin-left: 10px;
 }
@@ -29,6 +41,15 @@
 
 .location {
   font-size: 30rpx;
+  font-weight: lighter;
+}
+
+.btn-map {
+  background-color: #E5E5E5;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  color: black;
   font-weight: lighter;
 }
 
@@ -70,13 +91,10 @@
 .address {
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.btn-map {
-  background-color: #F0E6E5;
-  width: 30rpx;
-  font-size: 20rpx;
-  border-radius: 10rpx;
+.sessions-card-container {
+  margin: 2px 15px 2px 15px;
 }

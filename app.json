@@ -4,7 +4,7 @@
     "pages/show/show",
     "pages/profile/profile",
     "pages/instructor/instructor",
-    "pages/map/map"
+    "pages/booking/booking"
   ],
   "usingComponents": {
     "card": "/components/card/card"
