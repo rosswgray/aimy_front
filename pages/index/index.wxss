@@ -77,4 +77,6 @@ button {
 .picker{
   padding: 13px;
   background-color: #FFFFFF;
+  color: #4A7FB0;
+  
 }

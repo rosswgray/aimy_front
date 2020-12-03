@@ -1,15 +1,26 @@
 //app.js
 App({
+  
+  globalData: {
+    userInfo: null,
+    host: 'https://aimy.wogengapp.cn/',
+    // host: 'http://localhost:3000/',
+  },
 
 
   onLaunch: function () {
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     wx.login({
       success: res => {
-        
+        wx.request({
+          url: this.globalData.host + 'login',
+          method: 'post',
+          data: {
+            code: res.code
+          },
+          success: (res) => {
+            console.log("testing login", res)
+          }
+        })
       }
     })
 
@@ -32,10 +43,5 @@ App({
         }
       }
     })
-  },
-  globalData: {
-    userInfo: null,
-    host: 'https://aimy.wogengapp.cn/',
-    // host: 'http://localhost:3000/',
   }
 })

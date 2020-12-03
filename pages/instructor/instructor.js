@@ -1,31 +1,18 @@
-// pages/profile/profile.js
-const app = getApp()
+// pages/instructor/instructor.js
 Page({
 
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo
-    })
-  },
-
-
+  /**
+   * Page initial data
+   */
   data: {
 
   },
 
+  /**
+   * Lifecycle function--Called when page load
+   */
   onLoad: function (options) {
-    const page = this; 
-    wx.request({
-      url: `${getApp().globalData.host}api/v1/activities/`,
-      success: function(res) {
-        console.log(res)
-        const activities = res.data.activities
-        page.setData({ activities: activities.slice(0,20) })
-        console.log(activities)
-      }
-      })
+
   },
 
   /**
