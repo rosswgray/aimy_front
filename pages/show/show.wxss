@@ -33,11 +33,31 @@
   margin-left: 10px;
 }
 
+.date-and-book {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .date {
   font-size: 30rpx;
   font-weight: lighter;
   margin-bottom: 20rpx;
 }
+
+.booking-button {
+    background-color:  #0ea094;
+    color: white;
+    font-weight: bold;
+    font-size: 28rpx;
+    text-align: center;
+  }
+
+  .address {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
 
 .location {
   font-size: 30rpx;
@@ -88,13 +108,16 @@
   font-weight: light;
 }
 
-.address {
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .sessions-card-container {
   margin: 2px 15px 2px 15px;
 }
+
+.upcoming-sessions {
+font-size: 35rpx;
+color: #4A7FB0;
+font-weight: bold;
+margin-bottom: 30rpx;
+}
+
+
+

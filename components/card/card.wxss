@@ -6,6 +6,7 @@
   margin-left: 54rpx;
   border-radius: 10rpx;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .image {
