@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/show/show",
     "pages/profile/profile",
-    "pages/instructor/instructor"
+    "pages/instructor/instructor",
+    "pages/map/map"
   ],
   "usingComponents": {
     "card": "/components/card/card"
