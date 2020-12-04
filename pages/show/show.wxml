@@ -44,7 +44,7 @@
           <view>09:00 AM - 13:00 PM</view>
         </view>
         
-        <navigator bindtap="book" url="#" class="booking-button">Book</navigator>
+        <!-- <navigator bindtap="book" url="#" class="booking-button">Book</navigator> -->
 
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
@@ -52,7 +52,6 @@
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
             <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > view map </button>
-
         </view>
       </view>
 </view>

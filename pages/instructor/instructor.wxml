@@ -1,27 +1,38 @@
-<view class="instructor-banner" style="background">
-  <image class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-  <view class="h1-name"><text> Brigita</text></view>
+<view class="container-top">
+  
+  <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goBack" > back </button>
+  <view class="instructor-banner" style="background">
+    <view class="avatar-confirmation">
+      <image class="avatar-large" alt="avatar-large" src="../images/instructor.png" /><icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
+    </view>
+    <view class="h1-name"><text> Brigita</text></view>
+  </view>
 </view>
+<view class="container-info">
+  <view class="instruction-info">
+    <view class="h1">
+      <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
+      <text> Bio </text></view>
+    <view class="p"><text> I have been swimming since I was a child and have always loved being in the water. Although I never had formal lessons myself, I joined the swim team in high school. After high school, I missed swimming so much that I decided to become a lifeguard.
 
-<view class="instruction-info">
-  <view class="h1">
-    <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>
-    <text> Bio </text></view>
-  <view class="p"><text> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</text></view>
+    Soon after becoming a lifeguard, I began teaching swim lessons and have continued to do so for the past several years. I teach swimming because I think it is a very important skill to have.</text></view>
 
-  <view class="h1"> 
-    <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>
-    <text> Qualifications & certifications </text></view>
-  <view class="p"> <text> QUALIFICATIONS AND CERTIFICATIONS
-
--- 200 hr. Swimming instruction
--- 350 hr. 1-1 classroom experience </text></view>
-
-<view class="h1">
-  <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>
-  <text class="h1"> Upcoming sessions </text>
-</view>
+    <view class="h1"> 
+      <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
+      <text> Qualifications & certifications </text>
+    </view>
+    <view class="p"> 
+      <text> I currently hold my Lifeguarding, First Aid, and CPR-AED certificates.</text>
+      <view style="color: #4A7FB0; margin-top: 15rpx;"> 500 hr. Swimming instruction</view>
+    </view>
+  </view>
 </view>  
-<view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
-  <card activity="{{activity}}" />
-</view>
+<!-- SESSIONS CARDS -->
+  <view class="upcoming">
+    <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
+    <text class="h1"> Upcoming sessions </text>
+  </view>
+
+  <view wx:for="{{activity.sessions}}" wx:for-item="session" >
+      <sessions-card activity="{{session}}" />
+  </view>

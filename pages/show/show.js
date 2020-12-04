@@ -4,10 +4,10 @@ Page({
   data: {
     activity: {
       sessions: [{
-        title: 'Swim & PlaySwim & Play Swim & Play',
+        title: 'Swim & Play Start Making waves',
         date: new Date().toLocaleString(),
         organizer: {
-          name: 'Brigita Lolita'
+          name: 'Brigita'
         }
       }]
     },
