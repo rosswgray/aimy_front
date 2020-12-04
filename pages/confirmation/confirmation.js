@@ -8,11 +8,25 @@ Page({
 
   },
 
+  goToShow: function(){
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+
+  goToProfile: function(){
+    wx.switchTab({
+      url: '/pages/profile/profile',
+    })
+    // create a booking
+  },
+
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    console.log("testing", options)
   },
 
   /**

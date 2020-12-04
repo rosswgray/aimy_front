@@ -54,6 +54,6 @@
 
 
 <view class="button-div">
-  <navigator bindtap="book" url="#" class="disagree-button">Disagree</navigator>
-  <navigator bindtap="book" url="#" class="agree-button">Agree</navigator>
+  <navigator bindtap="goToShow" open-type="navigate" url="#" class="disagree-button">Disagree</navigator>
+  <navigator bindtap="goToProfile" open-type="navigate" url="#" class="agree-button">Agree</navigator>
 </view>
