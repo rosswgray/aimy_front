@@ -41,6 +41,7 @@ cards here
 </view>
 
 <!-- User Bookings -->
+
 <!-- <view class="card-container">
   <view class="profile-card">
     <view class="title-date">
@@ -53,5 +54,4 @@ cards here
 <!-- </view> -->
 
 <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button> -->
-
 
