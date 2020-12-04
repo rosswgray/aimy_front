@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 
+
 Page({
   data: {
 
@@ -21,12 +22,11 @@ Page({
     })
   },
   
-
   search: function(event) {
-    console.log("checking search", event)
+    // console.log("checking search", event)
     const page = this;
     const query = event.detail.value
-    console.log(query)
+    // console.log(query)
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities?query=${query}`,
       success: function(res) {
@@ -35,7 +35,7 @@ Page({
         // else {
         //   page.setData({errorMessage: "Sorry, no result found"})
         // }
-        console.log(222, res)
+        // console.log(222, res)
       }
     })
   },
@@ -51,10 +51,10 @@ Page({
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/`,
       success: function(res) {
-        console.log(res)
+        // console.log(res)
         const activities = res.data.activities
         page.setData({ activities: activities.slice(0,20) })
-        console.log(activities)
+        // console.log(activities)
       }
       })
     }, 
@@ -81,7 +81,7 @@ Page({
   //   }
   // },
   getUserInfo: function(e) {
-    console.log(e)
+    // console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
