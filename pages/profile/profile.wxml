@@ -34,9 +34,12 @@
      <card activity="{{activity}}" />
     </view> -->
 
-cards here
   </view>
-  <view class="tab-page" wx:if="{{activeTab == 1}}">card here</view>
+  <view class="tab-page" wx:if="{{activeTab == 1}}">
+    <view wx:for="{{bookings}}" wx:for-item="session" >
+    <sessions-card activity="{{session}}" />
+  </view>
+  </view>
 </view>
 </view>
 

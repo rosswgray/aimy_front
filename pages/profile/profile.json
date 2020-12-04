@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "sessions-card": "../../components/sessions-card/sessions-card"
+  }
 }

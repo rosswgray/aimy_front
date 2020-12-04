@@ -29,9 +29,13 @@ Page({
     // duration: 1000
   },
 
-  goToConfirm: function(){
+  goToConfirm: function(e){
+    console.log(e)
+    const session_id = e.currentTarget.dataset.id;
+    const page = this
+    console.log(e)
     wx.navigateTo({
-      url: '/pages/confirmation/confirmation',
+      url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
     }) 
    },
    getUserInfo: function(res) {

@@ -43,7 +43,7 @@
           <view style="padding-bottom: 15rpx;">Tomorrow</view>
           <view>{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
         </view>
-        <navigator wx:if="{{user}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Book</navigator>
+        <navigator wx:if="{{user}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
         <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Login</button>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
