@@ -17,11 +17,11 @@
 }
 
 .activity-title {
-  font-size: 80rpx;
+  font-size: 50rpx;
   font-weight: bold;
 }
 .provider-name {
-  font-size: 20rpx;
+  font-size: 30rpx;
 }
 
 .date {
