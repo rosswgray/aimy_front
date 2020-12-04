@@ -23,6 +23,16 @@
 <!-- <view class="activity-title">Activity Title</view> -->
 <view class="activity-title>">{{activity.title}}</view>
 
+<!-- TOP INFO: PRICE / LEFT SPOTS / BOOK BTN -->
+<view class="container-top">
+  <view>
+    <view style="color: #4A7FB0; font-size: 35rpx;">¥ 200</view>
+    <view style="color:#FE354C; weight: bold;">2 spots left!</view>
+  </view>
+  <view class="container-book">
+    <navigator style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Book</navigator>
+  </view>
+</view>
 
 <!-- ACTIVITY LOGISTICS -->
 <view>
@@ -30,28 +40,43 @@
       <view class="date-and-book">
         <!-- <view class="date"> {{activity.date}}</view> -->
         <view class="date">
-          <view>Tomorrow</view>
+          <view style="padding-bottom: 15rpx;">Tomorrow</view>
           <view>09:00 AM - 13:00 PM</view>
         </view>
+        
         <navigator bindtap="book" url="#" class="booking-button">Book</navigator>
+
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
-            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 200rpx;" bindtap="goToMap" > VIEW MAP </button>
+            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > view map </button>
+
         </view>
       </view>
+</view>
+<!-- CAPACITY INFO -->
+<view class="flex-progress">
+  <progress class="progress" percent="80" stroke-width="8" color="#63EB34" />
+</view>
+<view class="flex-capacity">
+  <view style="color: #4A7FB0"> 8 attendees </view>
+  <view style="color: #4A7FB0"> 10 </view>
 </view>
 
 
 <!-- INSTRUCTOR INFO -->
 <view class="instructor-view">
-  <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
-  <view>
-    <text class="instructor-name">{{activity.organizer.name}}</text>
-    <view>📞 182-888-8888</view>
+  <icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
+  <view class="avatar-view"> 
+    <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
+    <view>
+      <text class="instructor-name">{{activity.organizer.name}}</text>
+      <view style="color: #4A7FB0; font-size: 30rpx;">✆ 182-888-8888</view>
+    </view>
   </view>
+  <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToBio" > view bio </button>
 </view>
 
 

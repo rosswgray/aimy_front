@@ -82,7 +82,7 @@
    background-color:  #0ea094;
    color: white;
    font-weight: bold;
-   font-size: 28rpx;
+   font-size: 20rpx;
    text-align: center;
    padding-right: 110rpx;
  }
