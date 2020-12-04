@@ -1,6 +1,4 @@
-
 <!-- SHOW PAGE IMAGE -->
-
 <view>
   <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
@@ -9,7 +7,6 @@
 
 
 <!-- SWIPER  -->
-
 <!-- <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
@@ -23,7 +20,6 @@
 
 
 <!-- ACTIVITY TITLE -->
-
 <!-- <view class="activity-title">Activity Title</view> -->
 <view class="activity-title>">{{activity.title}}</view>
 
@@ -48,13 +44,15 @@
           <view>09:00 AM - 13:00 PM</view>
         </view>
         
+        <navigator bindtap="book" url="#" class="booking-button">Book</navigator>
+
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
-          
             <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > view map </button>
+
         </view>
       </view>
 </view>
@@ -69,7 +67,6 @@
 
 
 <!-- INSTRUCTOR INFO -->
-
 <view class="instructor-view">
   <icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
   <view class="avatar-view"> 
@@ -84,7 +81,6 @@
 
 
 <!-- ACTIVITY DESCRIPTION -->
-
 <view class="activity-description">
   <view class="description-h2">Description</view>
   <text class="description-p">{{activity.description}}</text>
@@ -92,7 +88,6 @@
 
 
 <!-- SESSIONS CARDS -->
-
 <view class="sessions-card-container">
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" >

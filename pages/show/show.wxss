@@ -65,6 +65,7 @@
     border-radius: 6%;
     /* padding: 15rpx 45rpx 15rpx 45rpx; */
     margin-right: 15%;
+
   }
 
   .address {

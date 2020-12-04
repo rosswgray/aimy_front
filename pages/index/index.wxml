@@ -4,22 +4,19 @@
   <image class="banner-image" style="width: 100vw; height: 30vh;" mode="aspectFill" src="../images/banner.jpg"> 
     <view class="image-child">
       <view style="font-size: large; color: white; font-weight: bolder;">Amazing activities,</view>
-      <view style="font-size: large; color: white; font-weight: bolder;">just waiting for you...</view>
+      <view style="font-size: large; color: white; font-weight: bolder;">just waiting for kids...</view>
       <views style="font-size: small; color: white; font-weight:lighter;"></views>
       <view style="font-size: small; color: white; font-weight: bold;"></view>
     </view>
   </image>
 </view>
 
-
-<!-- SEARCH BAR -->
 <!-- SEARCH BAR -->
 <view class="search-bar">
   <form bindsubmit="submitParams" >
     <view class="form">
       <input class="weui-input" bindconfirm="search" name="input" placeholder="Find an activity" /> 
        <image class="search_image" mode="aspectFill" src="../images/Search.png"></image>
-    
     </view>
   </form>
 </view>
@@ -33,7 +30,8 @@
   </picker>
 </view> -->
 <view class="section">
-<!-- TIME SELECTOR -->
+
+  <!-- TIME SELECTOR -->
 <view class="section1">
   <view class="section__title"></view>
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
@@ -53,6 +51,7 @@
     </view>
   </picker>
 </view>
+
 <!-- AREA SELECTOR -->
 <view class="section3">
   <view class="section__title"></view>
@@ -63,6 +62,7 @@
   </picker>
 </view>
 </view>
+
 <!-- CARDS SELECTOR-->
 <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
   <card activity="{{activity}}" />
