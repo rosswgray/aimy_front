@@ -1,4 +1,5 @@
 // pages/profile/profile.js
+const globalData = getApp().globalData
 const app = getApp()
 Page({
 
@@ -22,14 +23,13 @@ Page({
   },
 
   onLoad: function (options) {
+    
     const page = this; 
     wx.request({
-      url: `${getApp().globalData.host}api/v1/activities`,
+      url: `${getApp().globalData.host}api/v1/users/${globalData.user.id}/bookings`,
       success: function(res) {
         console.log(res)
-        const bookings = res.data.activities
-        page.setData({ activities: activities.slice(0,20) })
-        console.log(activities)
+        page.setData(res.data)
       }
       })
   },

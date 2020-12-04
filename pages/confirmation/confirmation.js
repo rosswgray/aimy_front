@@ -17,6 +17,15 @@ Page({
   goToProfile: function(){
     wx.switchTab({
       url: '/pages/profile/profile',
+
+    });
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/users/${options.userid}/bookings`,
+      method: 'POST',
+      data: {session_id: options.sessionid},
+      success: res => {
+        console.log('checking post result', res)
+      }
     })
     // create a booking
   },
@@ -26,7 +35,19 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("testing", options)
+    console.log(options);
+    const page = this;
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/activities/${options.activity_id}`,
+      success: res => {
+        const activity = res.data;
+        if (!activity.error) this.setData({ activity });
+        console.log(activity)
+    }});
+
+    // postBooking
+    
+    // console.log("testing", options)
   },
 
   /**
