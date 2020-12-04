@@ -1,0 +1,59 @@
+<!-- CONFIRMATION PAGE -->
+<view class="confirmation-h1">
+  <text>Confirm your Booking</text>
+</view>
+
+<view wx:for="{{activity.sessions}}" wx:for-item="session" >
+
+</view>
+
+
+<!-- ACTIVITY IMAGE -->
+<image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
+      placeholder="Child Development Activity" 
+      style="flex-shrink: 0;">
+</image>
+
+
+
+<!-- TITLE / INSTRUCTOR / DATE -->
+<view class="title-instructor-date">
+  <view class="activity-title">
+    <text>{{activity.title}}</text>
+  </view>
+  <view class="provider-name">
+    <text>by {{activity.organizer.name}}</text>
+  </view>
+  <view  class="date">
+    <text>{{activity.date}}</text>
+  </view>
+</view>
+
+
+<!-- WHAT TO BRING -->
+<view class="what-to-bring">
+  <view class="bring-title">What to Bring</view>
+  <text>
+  1. Swimming Suit
+  2. Towel
+  3. Swim Goggles
+  4. Arm Floaties
+  </text>
+</view>
+
+
+<view class="cancellation">
+  <view class="can-title">Cancellation Policy</view>
+  <text class="please-read">PLEASE READ BEFORE BOOKING
+  </text>
+  <view class="cancellation-details">Cancellations less than one day prior to the activity’s scheduled start will forfeit the payment in it’s entirety.
+  </view>
+  <view class="important-expectations">Parents are expected to remain at the activity location throughtout it’s entirety.
+  </view>
+</view>
+
+
+<view class="button-div">
+  <navigator bindtap="book" url="#" class="disagree-button">Disagree</navigator>
+  <navigator bindtap="book" url="#" class="agree-button">Agree</navigator>
+</view>

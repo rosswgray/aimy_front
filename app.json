@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/show/show",
+    "pages/confirmation/confirmation",
     "pages/profile/profile",
     "pages/instructor/instructor",
     "pages/booking/booking"
