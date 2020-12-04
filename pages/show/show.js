@@ -29,11 +29,17 @@ Page({
     // duration: 1000
   },
 
-   goToMap: function() {
-     wx.openLocation({
-       latitude: this.data.activity.latitude,
-       longitude: this.data.activity.longitude,
-     })
+  goToConfirm: function(){
+    wx.navigateTo({
+      url: '/pages/confirmation/confirmation',
+    }) 
+   },
+
+  goToMap: function() {
+    wx.openLocation({
+      latitude: this.data.activity.latitude,
+      longitude: this.data.activity.longitude,
+    })
     // wx.navigateTo({
     //   url: '/pages/map/map',
     // })
