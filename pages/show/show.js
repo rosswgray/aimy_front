@@ -34,6 +34,9 @@ Page({
       url: '/pages/confirmation/confirmation',
     }) 
    },
+   getUserInfo: function(res) {
+    console.log('getuserinfo res', res)
+   },
 
   goToMap: function() {
     wx.openLocation({
@@ -54,6 +57,8 @@ Page({
   onLoad: function (options) {
     // console.log("Options", options)
     const page = this
+    const user = getApp().globalData.user
+    this.setData({user})
     const id = options.id
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,

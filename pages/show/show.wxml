@@ -41,10 +41,10 @@
         <!-- <view class="date"> {{activity.date}}</view> -->
         <view class="date">
           <view style="padding-bottom: 15rpx;">Tomorrow</view>
-          <view>09:00 AM - 13:00 PM</view>
+          <view>{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
         </view>
-  
-        <navigator bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Book</navigator>
+        <navigator wx:if="{{user}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Book</navigator>
+        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Login</button>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
