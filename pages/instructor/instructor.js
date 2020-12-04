@@ -5,8 +5,19 @@ Page({
    * Page initial data
    */
   data: {
-
+    iconSize: [20, 30, 40, 50, 60, 70],
+    iconColor: [
+      'red', 'orange', 'yellow', 'green', 'rgb(0,255,255)', 'blue', 'purple', 'rgb(99,235,52)'
+    ],
+    iconType: [
+      'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
+    ]
   },
+
+    // goBack: function() {
+
+    // },
+
 
   /**
    * Lifecycle function--Called when page load
