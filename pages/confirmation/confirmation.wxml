@@ -4,7 +4,6 @@
 </view>
 
 <view wx:for="{{activity.sessions}}" wx:for-item="session" >
-
 </view>
 
 

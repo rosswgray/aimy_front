@@ -9,16 +9,18 @@ App({
 
 
   onLaunch: function () {
+    let page = this
     wx.login({
       success: res => {
         wx.request({
-          url: that.globalData.host + 'api/v1/login',
+          url: page.globalData.host + 'api/v1/login',
           method: 'post',
           data: {
             code: res.code
           },
           success: (res) => {
             console.log("testing login", res)
+            getApp().globalData.user = res.data.user
           }
         })
       }
