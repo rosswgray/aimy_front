@@ -18,7 +18,12 @@ Page({
     ],
     iconType: [
       'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
-    ]
+    ],
+    // POP UP FOR LOG IN
+    title : "Authorization",
+    body: "Plese, for booking, you need to log in. Thank you.",
+    hasCloseIcon: true,
+    showPopup: false
 
     // BELOW DATA FOR SWIPER, imgUrls need to change
     
@@ -27,6 +32,18 @@ Page({
     // autoplay: false,
     // interval: 5000,
     // duration: 1000
+  },
+
+  showPopup: function(){
+    this.setData({
+      showPopup: true
+    })
+  },
+
+  hidePopup: function() {
+    this.setData({
+      showPopup: false
+    })
   },
 
   goToConfirm: function(e){

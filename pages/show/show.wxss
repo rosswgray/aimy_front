@@ -19,11 +19,31 @@
   background: #fff;
 } */
 
+.container-title {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+border-radius: 12rpx;
+width: 95%;
+position: absolute;
+top: 165rpx;
+left: 2.5%;
+padding-top: 5rpx;
+padding-bottom: 5rpx;
+}
+
+#heart {
+  width: 35rpx;
+  height: 35rpx;
+}
+
 .activity-title {
   font-size: 45rpx;
   color: #4A7FB0;
   font-weight: bold;
-  padding: 10px;
+  padding-bottom: 5rpx;
+  margin-right: 10rpx;
 }
 
 .activity-log {
@@ -133,13 +153,14 @@
 }
 
 .instructor-name {
-  font-size: 40rpx;
+  font-size: 35rpx;
   color: #4A7FB0;
   font-weight: bold;
 }
 
 .activity-description {
   margin-left: 5%;
+  margin-right: 5%;
 }
 
 .description-h2 {
@@ -167,5 +188,63 @@ margin-top: 30rpx;
 margin-bottom: 30rpx;
 }
 
+/* For the pop-up */
+.wrap-pop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  /* transform: translateY(2000px); */
+}
 
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.3;
+  display: flex;
+  flex-direction: row;
+  z-index: 9001;
+  /* animation */
+  /* transform: translateY(2000px);
+  opacity: 0; */
+}
 
+.h1 {
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.popup {
+  background: #397fc2;
+  top: 50%;
+  left: 50%;
+  height: 40vh;
+  padding: 25rpx;
+  width: 80vw;
+  margin: 50rpx;
+  opacity: 1;
+  border-radius: 15px;
+  z-index: 9002;
+  /* position: relative; */
+  color: white;
+}
+
+.close-icon {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 50px;
+  /* padding: 30px; */
+  z-index: 9003;
+}

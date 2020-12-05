@@ -19,11 +19,12 @@
     </view>
   </view>
   
-  <view class="right-box">
+  <!-- <view class="right-box">
     <view class="div-line"></view>
     <view wx:if="{{isInstructor}}">I'm an instructor!</view>
     <view wx:else class="activity-book">
-        <button class="button" style="width: 5px;">View</button>
-    </view>
-  </view>
+      <text style="font-size: 25rpx;">view</text> -->
+        <!-- <button class="button" style="width: 5px;">View</button>
+    </view> -->
+  <!-- </view> -->
 </view>

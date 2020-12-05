@@ -59,11 +59,12 @@
   font-weight: lighter;
   margin-bottom: 10rpx;
 }
- .right-box {
+/* // right-box KYLE */
+ /* .right-box {
   flex-shrink: 0;
   display: flex;
   padding: 25rpx 10rpx;
- }
+ } */
 
 .div-line {
   border-left: rgba(0, 0, 0, 0.1) 1px solid ;
@@ -79,12 +80,11 @@
  }
 
  button {
-   background-color:  #0ea094;
-   color: white;
+   color: black;
    font-weight: bold;
    font-size: 20rpx;
    text-align: center;
-   padding-right: 110rpx;
+   /* padding-right: 150rpx; */
  }
 
  /* .card-pricing {
