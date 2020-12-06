@@ -63,6 +63,9 @@
 </view>
 </view>
 
+<!-- VANT COMPONENT scrollable -->
+<van-notice-bar scrollable text="Breaking knews" />
+
 <!-- CARDS SELECTOR-->
 <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
   <card activity="{{activity}}" />

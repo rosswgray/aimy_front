@@ -1,12 +1,13 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+ 
 
 Page({
   data: {
 
   },
+ 
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
