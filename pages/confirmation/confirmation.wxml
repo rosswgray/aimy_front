@@ -1,22 +1,82 @@
 <!-- CONFIRMATION PAGE -->
-<view class="confirmation-h1">
+
+<!-- SUMMARY -->
+<view class="top"> </view>
+
+<view class="container-summary">
+  <view>
+    <icon class="icon" color="rgb(99,235,52)" type="success" size="40" style="padding-left: 40%;"/><view style="display: flex; color: #4A7FB0; font-weight: bold; justify-content: center;">Successfully booked!</view>
+    <view style="display: flex; justify-content: center; color: #4A7FB0; margin-bottom: 30rpx;">_______________________</view>
+    <view class="activity-title">
+     <text>{{activity.title}} Title</text>
+    </view>
+    <view class="Time-data">
+      <view style="display: flex, justify-content: center;">Tue, march 3 at 10:00am{{activity.session_id.date}}</view>
+    </view>
+    <view class="Instructor-data">
+      <view style="font-size: 40rpx; margin-top: 10rpx; display: flex; justify-content: center; margin-bottom: 10rpx;">with Brigita{{instructor}}</view>
+      <view style="display: flex; justify-content: center; font-size: 25rpx;">Instructor at Making Waves</view>
+    </view> 
+  </view>
+</view>
+
+<view class="container-address">
+   <image id="location" src="../images/location.png"></image>
+  <view class="address-data">
+      <text>188 Shannxi North Road
+        地址：陕西北路188号
+      </text>
+  </view>
+</view>
+
+<view class="container-requirements">
+  <view>
+    <icon id="warn" color="rgb(16,174,255)" type="warn" size="30"></icon>
+  </view>
+  <button url="#" class="popUp-button" bindtap="showPopup">Requirements</button>
+</view>
+
+<!-- popup -->
+
+<view class="wrap-pop" wx:if="{{showPopup}}" >
+  <view class="mask"  bindtap="hidePopup"></view>
+  <view class="popup index-text" style="width: {{ langPopup? '70vw' : '93vw' }}" >
+    <image class="close-icon" wx:if="{{hasCloseIcon}}" bindtap="hidePopup" src="../images/point-right.svg"></image>
+      <view class="h1">{{title}}</view>
+      <view class="index-text-slim">{{subtitle}}
+        <view class="body" wx:key='index' wx:for="{{requirements}}" wx:for-item="requirement" >
+          <view><icon color="white" type="success_no_circle" size="20"></icon>{{requirement}}</view>
+        </view>
+      </view>
+  </view>
+</view>
+
+<view class="button-container">
+  <navigator bindtap="goToProfile" open-type="navigate" url="#" class="button-confirm">Confirm</navigator>
+  <navigator bindtap="goToShow" open-type="navigate" url="#" class="button-cancel">Cancel</navigator>
+</view>
+
+
+<!-- PREVIOUS CODE  -->
+
+<!-- <view class="confirmation-h1">
   <text>Confirm your Booking</text>
 </view>
 
 <view wx:for="{{activity.sessions}}" wx:for-item="session" >
-</view>
+</view> -->
 
 
 <!-- ACTIVITY IMAGE -->
-<image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
+<!-- <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
       style="flex-shrink: 0;">
-</image>
+</image> -->
 
 
 
 <!-- TITLE / INSTRUCTOR / DATE -->
-<view class="title-instructor-date">
+<!-- <view class="title-instructor-date">
   <view class="activity-title">
     <text>{{activity.title}}</text>
   </view>
@@ -30,7 +90,7 @@
 
 
 <!-- WHAT TO BRING -->
-<view class="what-to-bring">
+<!-- <view class="what-to-bring">
   <view class="bring-title">What to Bring</view>
   <text>
   1. Swimming Suit
@@ -55,4 +115,4 @@
 <view class="button-div">
   <navigator bindtap="goToShow" open-type="navigate" url="#" class="disagree-button">Disagree</navigator>
   <navigator bindtap="goToProfile" open-type="navigate" url="#" class="agree-button">Agree</navigator>
-</view>
+</view> -->

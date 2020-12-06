@@ -1,6 +1,190 @@
 
 /* pages/confirmation/confirmation.wxss */
+.page {
+  background-color: #979797;
+}
 
+.top {
+  margin-bottom: 40rpx;
+}
+
+.container-summary {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 580rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.activity-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.icon {
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.container-address {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding-top: 15rpx;
+  height: 110rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#location {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.address-data {
+  padding-top: 15rpx;
+  font-size: 25rpx;
+  width: 80%;
+}
+
+.popUp-button {
+  height: 80rpx;
+  background-color:  #4A7FB0;
+  color: white;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.container-requirements {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 110rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#warn {
+  position: absolute; 
+  left: 20rpx; 
+  bottom: 35rpx;
+}
+
+/* For the pop-up */
+.wrap-pop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  /* transform: translateY(2000px); */
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.3;
+  display: flex;
+  flex-direction: row;
+  z-index: 9001;
+  /* animation */
+  /* transform: translateY(2000px);
+  opacity: 0; */
+}
+
+.h1 {
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.index-text-slim {
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.body {
+  margin-top: 30rpx;
+  text-align: left;
+}
+
+.popup {
+  background: #397fc2;
+  top: 50%;
+  left: 50%;
+  height: 50vh;
+  padding: 25rpx;
+  width: 80vw;
+  margin: 50rpx;
+  opacity: 0.9;
+  border-radius: 15px;
+  z-index: 9002;
+  /* position: relative; */
+  color: white;
+}
+
+.close-icon {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 50px;
+  /* padding: 30px; */
+  z-index: 9003;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100rpx 30rpx 50rpx 30rpx;
+}
+
+.button-confirm {
+  color: white;
+  background-color: #0ea094;
+  /* padding: 30rpx 90rpx; */
+  padding: 30rpx;
+  width: 280rpx;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.button-cancel {
+  color: white;
+  background-color: #C61414;
+  /* padding: 30rpx 90rpx; */
+  padding: 30rpx;
+  width: 280rpx;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* PREVIOUS */
+/* 
 .confirmation-h1 {
   margin: 60rpx 30rpx 20rpx 30rpx;
   color: #4A7FB0;
@@ -18,9 +202,12 @@
 }
 
 .activity-title {
-  font-size: 50rpx;
+  font-size: 20rpx;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
 }
+
 .provider-name {
   font-size: 30rpx;
 }
@@ -86,14 +273,14 @@
   color: white;
   background-color: #C61414;
   /* padding: 30rpx 90rpx; */
-  padding: 32rpx;
+  /* padding: 32rpx;
   width: 320rpx;
   box-sizing: border-box;
   text-align: center;
   border-radius: 4px;
-}
+} */
 
-/* pages/confirmation/confirmation.wxss */
+/* pages/confirmation/confirmation.wxss
 
 .confirmation-h1 {
   margin: 60rpx 30rpx 20rpx 30rpx;
@@ -111,10 +298,6 @@
   margin: 40rpx 30rpx 20rpx 30rpx;
 }
 
-.activity-title {
-  font-size: 50rpx;
-  font-weight: bold;
-}
 .provider-name {
   font-size: 30rpx;
 }
@@ -180,10 +363,10 @@
   color: white;
   background-color: #C61414;
   /* padding: 30rpx 90rpx; */
-  padding: 32rpx;
+  /* padding: 32rpx;
   width: 320rpx;
   box-sizing: border-box;
   text-align: center;
   border-radius: 4px;
-}
+} */ 
 

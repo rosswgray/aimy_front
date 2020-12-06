@@ -5,7 +5,7 @@
     "pages/confirmation/confirmation",
     "pages/profile/profile",
     "pages/instructor/instructor",
-    "pages/booking/booking"
+    "pages/organizer/organizer"
   ],
   "usingComponents": {
     "card": "/components/card/card"
