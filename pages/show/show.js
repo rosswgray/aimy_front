@@ -1,4 +1,5 @@
 const app = getApp();
+const globalData = getApp().globalData;
 
 Page({
   data: {
@@ -38,9 +39,22 @@ Page({
       url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
     }) 
    },
-   getUserInfo: function(res) {
-    console.log('getuserinfo res', res)
-   },
+
+   getUserInfo: function(e){
+    let userInfo = e.detail.userInfo
+    if (userInfo == undefined){
+      
+    } else {
+      this.setData({
+        userInfo: userInfo,
+        hasUserInfo: true
+      })
+      globalData.hasUserInfo = true
+      globalData.userInfo = userInfo
+      this.goToConfirm()
+    }
+    // put request to update userinfo on the backend
+  },
 
   goToMap: function() {
     wx.openLocation({
@@ -63,6 +77,9 @@ Page({
     const page = this
     const user = getApp().globalData.user
     this.setData({user})
+    this.setData({
+      hasUserInfo: globalData.hasUserInfo
+    })
     const id = options.id
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,

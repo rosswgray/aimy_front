@@ -13,22 +13,22 @@
 </view> -->
 
 <!-- IF user is not logged in, displaying the login button -->
-<button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn">Please log in</button>
+<button class='login-button' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
 
-<view wx:if="{{loggedIn}}">
+<view wx:if="{{hasUserInfo}}">
   <view class="welcome">Welcome {{userInfo.nickName}}</view>
 </view>
 
 
 
 <!-- BOOKING BAR IRENE -->
-<view wx:if="{{loggedIn}}">
+<view wx:if="{{hasUserInfo}}">
 <view class="tabs-container">
   <view class="tab-titles">
     <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
     <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
   </view>
-  <view class="tab-page" wx:if="{{activeTab == 0}}">
+  <view class="tab-page" wx:if="{{activeTab == 1}}">
     
     <!-- <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
      <card activity="{{activity}}" />
@@ -37,7 +37,7 @@
   </view>
   <view class="tab-page" wx:if="{{activeTab == 0}}">
     <view wx:for="{{bookings}}" wx:for-item="session" >
-    <sessions-card activity="{{session}}" />
+    <sessions-card activity="{{session.sesssion}}" />
   </view>
   </view>
 </view>
