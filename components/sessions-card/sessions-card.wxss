@@ -27,7 +27,7 @@
    /* margin: 5px; */
  }
 
-.activity-title {
+ .provider-name {
   font-size: 16px;
   color: #4A7FB0;
   font-weight: bolder;
@@ -37,25 +37,36 @@
   text-overflow: ellipsis;
 }
 
- .provider-name {
+/* OLD INFO ON SESSION CARD */
+
+/* .activity-title {
+  font-size: 16px;
+  color: #4A7FB0;
+  font-weight: bolder;
+  max-width: 38vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+ /* .provider-name {
    font-size: small;
    font-weight: lighter;
    line-height: 10rpx;
- }
+ } */
 
  .date-time {
-   display: flex;
    margin-top: 10px;
  }
 
  .date {
-  font-size: 20rpx;
+  font-size: 28rpx;
   font-weight: bold;
   padding-right: 30rpx;
 }
 
 .time {
-  font-size: 20rpx;
+  font-size: 24rpx;
   font-weight: lighter;
   margin-bottom: 10rpx;
 }

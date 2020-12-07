@@ -16,6 +16,13 @@
   top: 42%;
   transform: translate(-50%, -50%);
 }
+
+.welcome {
+ text-align: center;
+ font-size: 40rpx;
+ color: #4A7FB0;
+ margin-bottom: 10rpx;
+}
  
 .line-container {
   width: 100vw;
@@ -97,10 +104,7 @@
   height: 40px;
   align-items: right;
 } */
-.welcome {
- text-align: center;
- color: #4A7FB0
-}
+
 
 /**index.wxss**/
 .container {
