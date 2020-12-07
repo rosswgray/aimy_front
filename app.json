@@ -5,7 +5,8 @@
     "pages/confirmation/confirmation",
     "pages/profile/profile",
     "pages/instructor/instructor",
-    "pages/booking/booking"
+    "pages/booking/booking",
+    "pages/favourite/favourite"
   ],
   "usingComponents": {
     "card": "/components/card/card"
@@ -22,10 +23,16 @@
     "list": [
      {
        "pagePath": "pages/index/index",
-       "iconPath": "pages/images/explore.png",
-       "selectedIconPath": "pages/images/explore.png",
+       "iconPath": "pages/images/explore2.png",
+       "selectedIconPath": "pages/images/explore2.png",
        "text": "Explore"
      },
+     {
+      "pagePath": "pages/favourite/favourite",
+      "iconPath": "pages/images/heart.png",
+      "selectedIconPath": "pages/images/heart.png",
+      "text": "Favourites"
+    },
      {
       "pagePath": "pages/profile/profile",
       "iconPath": "pages/images/profile.png",

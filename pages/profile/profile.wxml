@@ -3,7 +3,10 @@
 <!-- Tree/Image Avatar -->
 <view class="img-container">
   <image src="https://us.123rf.com/450wm/kudryashka/kudryashka1609/kudryashka160900327/64881825-stock-vector-colorful-art-tree-for-your-design-vector-illustration.jpg?ver=6" class="img-background"></image>
-  <image class="avatar-large" alt="avatar-large" src="{{userInfo.avatarUrl}}" />
+  <view wx:if="{{loggedIn}}" class="banner-welcome">
+    <image class="avatar-large" alt="avatar-large" src="{{userInfo.avatarUrl}}" />
+    <view class="welcome">Welcome {{userInfo.nickName}}!</view>
+  </view>
 </view>
 
 <!-- Bookings Bar -->
@@ -15,18 +18,16 @@
 <!-- IF user is not logged in, displaying the login button -->
 <button class='login-button' wx:if="{{!loggedIn}}" bindtap="logIn">Please log in</button>
 
-<view wx:if="{{loggedIn}}">
-  <view class="welcome">Welcome {{userInfo.nickName}}</view>
-</view>
 
 
 
-<!-- BOOKING BAR IRENE -->
+
+<!-- BOOKING BAR -->
 <view wx:if="{{loggedIn}}">
 <view class="tabs-container">
   <view class="tab-titles">
     <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
-    <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
+    <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favourites</view>
   </view>
   <view class="tab-page" wx:if="{{activeTab == 0}}">
     
