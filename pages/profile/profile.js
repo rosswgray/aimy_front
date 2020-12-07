@@ -83,7 +83,7 @@ Page({
 
   },
   switchTab: function(e) {
-    console.log("checing", e.currentTarget.dataset.tab)
+    console.log("checking", e.currentTarget.dataset.tab)
     this.setData({
       activeTab: e.currentTarget.dataset.tab
     })
