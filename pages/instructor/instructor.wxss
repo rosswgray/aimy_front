@@ -1,5 +1,10 @@
 /* pages/instructor/instructor.wxss */
 
+.page {
+  height: 100vh;
+  background: #f8f4f4;
+}
+
 .container-top {
 display: flex;
 align-items: center;
@@ -28,8 +33,9 @@ justify-content: space-evenly;
 .container-info {
 width: 90%;
 margin: 0 auto;
+margin-top: 20rpx;
 overflow: hidden;
-background: #f8f5f5;
+background: white;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
 border-radius: 6rpx;
 }
@@ -68,20 +74,22 @@ border-radius: 6rpx;
   font-size: 14px;
   margin-bottom: 50rpx;
 }
-.instruction-info {
+.info {
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
   margin-left: 10rpx;
   padding-left: 10rpx;
   padding-right: 10rpx;
 }
-
+/* 
 .picker {
   color: red;
 }
 .icon-sm {
   width: 21px;
   height: 12px
-}
+} */
 
-.upcoming {
+/* .upcoming {
   margin: 20rpx 0rpx 0rpx 50rpx;
-}
+} */
