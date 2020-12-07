@@ -22,7 +22,7 @@
 
 
 
-<!-- BOOKING BAR IRENE -->
+<!-- BOOKING BAR -->
 <view wx:if="{{hasUserInfo}}">
 <view class="tabs-container">
   <view class="tab-titles">
@@ -44,6 +44,7 @@
   </view>
 
   </view>
+</view>
 </view>
 
 <!-- User Bookings -->
