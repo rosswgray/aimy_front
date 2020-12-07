@@ -110,6 +110,7 @@
   width: 100vw;
   justify-content: center;
 }
+
 .tabs-container {
   height: 70vh;
   display: flex;
@@ -151,6 +152,7 @@
   background-color: white;
   border-radius: 10px;
 }
+
 .active {
   font-weight: 600;
   color: black;
