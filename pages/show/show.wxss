@@ -19,13 +19,26 @@
   background: #fff;
 } */
 
+.show-banner {
+  display: flex;
+  flex-direction: row;
+  }
+
 .activity-title {
   font-size: 45rpx;
   color: #4A7FB0;
   font-weight: bold;
-  padding: 10px;
+  padding-right: 111px;
+
+}
+.activity-heart {
+  height: 34px; 
+  width: 20px;
+
 }
 
+
+  
 .activity-log {
   display: flex;
   flex-direction: column;
@@ -166,6 +179,4 @@ font-weight: bold;
 margin-top: 30rpx;
 margin-bottom: 30rpx;
 }
-
-
 

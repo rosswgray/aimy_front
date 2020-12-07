@@ -21,7 +21,11 @@
 
 <!-- ACTIVITY TITLE -->
 <!-- <view class="activity-title">Activity Title</view> -->
-<view class="activity-title>">{{activity.title}}</view>
+<view class="show-banner"> 
+  <view class="activity-title>">{{activity.title}}</view>
+  <image class="activity-heart" mode="aspectFit" src="../images/heart.jpg"> </image>
+</view>
+
 
 <!-- TOP INFO: PRICE / LEFT SPOTS / BOOK BTN -->
 <view class="container-top">
@@ -43,8 +47,8 @@
           <view style="padding-bottom: 15rpx;">Tomorrow</view>
           <view>{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
         </view>
-        <navigator wx:if="{{user}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
-        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Login</button>
+        <navigator wx:if="{{hasUserInfo}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
+        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
@@ -69,6 +73,8 @@
   <icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
   <view class="avatar-view"> 
     <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
+
+  
     <view>
       <text class="instructor-name">{{activity.organizer.name}}</text>
       <view style="color: #4A7FB0; font-size: 30rpx;">✆ 182-888-8888</view>

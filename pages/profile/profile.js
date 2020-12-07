@@ -3,28 +3,30 @@ const globalData = getApp().globalData
 const app = getApp()
 Page({
 
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo
-    })
-  },
-
 
   data: {
     loggedIn: false,
+    activeTab: 0
   },
-  logIn: function() {
-    console.log(this.data)
-    this.setData({userInfo: getApp().globalData.userInfo})
-    this.setData({loggedIn: true})
-    this.setData({activeTab:0})
+
+  getUserInfo: function(e){
+    let userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: userInfo,
+      hasUserInfo: true
+    })
+    globalData.hasUserInfo = true
+    globalData.userInfo = userInfo
+    // put request to update userinfo on the backend
   },
 
   onLoad: function (options) {
     
     const page = this; 
+    page.setData({
+      hasUserInfo: globalData.hasUserInfo,
+      userInfo: globalData.userInfo
+    })
     wx.request({
       url: `${getApp().globalData.host}api/v1/users/${globalData.user.id}/bookings`,
       success: function(res) {
