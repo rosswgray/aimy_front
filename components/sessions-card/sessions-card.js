@@ -15,16 +15,48 @@ Component({
 
   },
 
+  
+
   /**
    * Component methods
    */
   methods: {
-    goToShow: function(event) {
-      const id = event.currentTarget.dataset.id
-      console.log(id)
+    goToConfirm: function(e){
+      const session_id = e.currentTarget.dataset.id;
+      const page = this
+      console.log("im in goToConfirm", session_id)
       wx.navigateTo({
-        url: `/pages/show/show?id=${id}`,
-      })
+        url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      }) 
+     },
+     
+      goToConfirmAfterLogin: function(id){
+      console.log(e)
+      const session_id = id;
+      const page = this
+      console.log(e)
+      wx.navigateTo({
+        url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      }) 
+     },
+  
+     getUserInfo: function(e){
+      let userInfo = e.detail.userInfo
+      let sessionId = e.target.dataset.id
+      console.log("checking if it has has data-id", e)
+      if (userInfo == undefined){
+        
+      } else {
+        this.setData({
+          userInfo: userInfo,
+          hasUserInfo: true
+        })
+        globalData.hasUserInfo = true
+        globalData.userInfo = userInfo
+  
+        this.goToConfirmAfterLogin(sessionId)
+      }
+      // put request to update userinfo on the backend
     },
   }
 })

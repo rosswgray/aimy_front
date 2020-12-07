@@ -31,10 +31,17 @@ Page({
   },
 
   goToConfirm: function(e){
-    console.log(e)
     const session_id = e.currentTarget.dataset.id;
     const page = this
-    console.log(e)
+    console.log("im in goToConfirm", session_id)
+    wx.navigateTo({
+      url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+    }) 
+   },
+
+   goToConfirmAfterLogin: function(id){
+    const session_id = id;
+    const page = this
     wx.navigateTo({
       url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
     }) 
@@ -42,6 +49,8 @@ Page({
 
    getUserInfo: function(e){
     let userInfo = e.detail.userInfo
+    let sessionId = e.target.dataset.id
+    console.log("checking if it has has data-id", e)
     if (userInfo == undefined){
       
     } else {
@@ -51,7 +60,8 @@ Page({
       })
       globalData.hasUserInfo = true
       globalData.userInfo = userInfo
-      this.goToConfirm()
+
+      this.goToConfirmAfterLogin(sessionId)
     }
     // put request to update userinfo on the backend
   },

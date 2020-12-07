@@ -73,8 +73,6 @@
   <icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
   <view class="avatar-view"> 
     <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
-
-  
     <view>
       <text class="instructor-name">{{activity.organizer.name}}</text>
       <view style="color: #4A7FB0; font-size: 30rpx;">✆ 182-888-8888</view>
