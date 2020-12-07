@@ -21,26 +21,26 @@
 
 
 
-<!-- BOOKING BAR IRENE -->
+<!-- BOOKING BAR -->
 <view wx:if="{{loggedIn}}">
-<view class="tabs-container">
-  <view class="tab-titles">
-    <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
-    <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
-  </view>
-  <view class="tab-page" wx:if="{{activeTab == 0}}">
+  <view class="tabs-container">
+    <view class="tab-titles">
+     <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
+     <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
+    </view>
+  <view class="tab-page" wx:if="{{activeTab == 1}}">
     
     <!-- <view wx:key='index' wx:for="{{activities}}" wx:for-item="activity" >
      <card activity="{{activity}}" />
     </view> -->
 
   </view>
-  <view class="tab-page" wx:if="{{activeTab == 0}}">
-    <view wx:for="{{bookings}}" wx:for-item="session" >
-    <sessions-card activity="{{session}}" />
+    <view class="tab-page" wx:if="{{activeTab == 0}}">
+     <view wx:key="{{bookings}}" wx:for-item="session" >
+       <sessions-card activity="{{session}}" />
+      </view>
+    </view>
   </view>
-  </view>
-</view>
 </view>
 
 <!-- User Bookings -->
