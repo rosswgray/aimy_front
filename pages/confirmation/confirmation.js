@@ -20,9 +20,9 @@ Page({
 
     });
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${options.userid}/bookings`,
+      url: `${getApp().globalData.host}api/v1/users/${this.data.userid}/bookings`,
       method: 'POST',
-      data: {session_id: options.sessionid},
+      data: {session_id: this.data.sessionid},
       success: res => {
         console.log('checking post result', res)
       }
@@ -37,6 +37,7 @@ Page({
   onLoad: function (options) {
     console.log(options);
     const page = this;
+    page.setData(options)
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/${options.activity_id}`,
       success: res => {
