@@ -36,7 +36,7 @@
     </view> -->
 
   </view>
-  <view class="tab-page" wx:if="{{activeTab == 1}}">
+  <view class="tab-page" wx:if="{{activeTab == 0}}">
     <view wx:for="{{bookings}}" wx:for-item="session" >
     <sessions-card activity="{{session}}" />
   </view>
