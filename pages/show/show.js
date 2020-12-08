@@ -39,16 +39,19 @@ Page({
 
    goToConfirmAfterLogin: function(id){
     const session_id = id;
-    const page = this
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?user_id=${page.data.user_id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      url: `/pages/confirmation/confirmation?user_id=${this.data.user_id}&sessionid=${session_id}&activity_id=${this.data.activity.id}`,
     }) 
    },
 
-   getUserInfo: function(e){
+   bindGetUserInfo: function (e) {
+    const user = wx.getStorageSync('user');
+
+    console.log(e);
+
+
     let userInfo = e.detail.userInfo
     let sessionId = e.target.dataset.id
-    console.log("checking if it has has data-id", e)
     if (userInfo == undefined){
       
     } else {
@@ -59,8 +62,13 @@ Page({
       globalData.hasUserInfo = true
       globalData.userInfo = userInfo
 
-      this.goToConfirmAfterLogin(sessionId)
+      this.confirmBooking(session_id)
     }
+
+    // Pseudo Code: 
+    // 1. Add a session ID to the green button (data-sesssionid)
+    // 2. Create ONE confirmBooking funciton that navigates to the proper confirmation page
+    // 
     // put request to update userinfo on the backend
   },
 
@@ -78,11 +86,8 @@ Page({
       })
   },
 
-  onLoad: function (options) {
-    const user_id = getApp().globalData.user_id
-    this.setData({user_id})
-    this.setData({ hasUserInfo: globalData.hasUserInfo })
-    const id = options.id
+  getActivities: function (id) {
+    const app = getApp();
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,
       success: res => {
@@ -91,5 +96,18 @@ Page({
         imgUrls: [activity.photo_1, activity.photo_2, activity.photo_3] });
       }
     })
+  },
+
+  onLoad: function (options) {
+    const user = wx.getStorageSync('user');
+    this.getActivities(options.id);
+    this.setData({user});
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: this.data.activity.name,
+      path: `/pages/show/show?id=${this.data.activity.id}`,
+    }
   }
 })

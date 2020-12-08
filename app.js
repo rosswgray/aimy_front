@@ -7,46 +7,49 @@ App({
     // host: 'http://localhost:3000/',
   },
 
-
-  onLaunch: function () {
-    let page = this
+  login: function () {
     wx.login({
       success: res => {
         wx.request({
-          url: page.globalData.host + 'api/v1/login',
-          method: 'post',
-          data: {
-            code: res.code
-          },
-          success: (res) => {
-            console.log("testing login", res)
-            getApp().globalData.user_id = res.data.user_id
+          url: this.globalData.host + 'api/v1/login',
+          method: 'POST',
+          data: { code: res.code },
+          success: (res) => { 
+            this.getUserInfo(res.data.user_id);
           }
         })
       }
     })
+  },
 
+  getUserInfo: function (user_id) {
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.hasUserInfo = true
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
+              const user = {
+                id: user_id,
+                hasInfo: true,
+                userInfo: res.userInfo
               }
+              wx.setStorageSync('user', user)
             }
           })
         } else {
-          this.globalData.hasUserInfo = false
+          const user = {
+            id: user_id,
+            hasInfo: false
+          }
+          wx.setStorageSync('user', user)
         }
       }
+      
     })
-  }
+  },
+
+  onLaunch: function () {
+    this.login();
+    this.getUserInfo();
+  }   
 })
