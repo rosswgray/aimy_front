@@ -34,11 +34,8 @@
 .activity-heart {
   height: 34px; 
   width: 20px;
-
 }
 
-
-  
 .activity-log {
   display: flex;
   flex-direction: column;
@@ -49,7 +46,6 @@
 .date-and-book {
   display: flex;
   justify-content: space-between;
-
 }
 
 .date {
@@ -73,10 +69,9 @@
     background-color:  #0ea094;
     color: white;
     font-weight: bold;
-    font-size: 30rpx;
+    font-size: 35rpx;
     text-align: center;
     border-radius: 6%;
-    /* padding: 15rpx 45rpx 15rpx 45rpx; */
     margin-right: 15%;
 
   }
@@ -93,7 +88,7 @@
 }
 
 .btn-map {
-  background-color: #E5E5E5;  
+  background-color: white;  
   font-size: 10px;
   border-radius: 5px;
   color: black;
