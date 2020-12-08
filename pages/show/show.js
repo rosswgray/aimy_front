@@ -19,15 +19,13 @@ Page({
     ],
     iconType: [
       'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
-    ]
+    ],
 
-    // BELOW DATA FOR SWIPER, imgUrls need to change
-    
-    // imgUrls: ["/images/1597004.jpg", "/images/baby-playing1.jpg", "/images/frontiers-in-education-preschool.jpg", "/images/c3e44acba36904a565209ab331bdcc64f868cf15_August_banner_28.jpg"]
-    // indicatorDots: false,
-    // autoplay: false,
-    // interval: 5000,
-    // duration: 1000
+    // SWIPER 
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000
   },
 
   goToConfirm: function(e){
@@ -85,7 +83,8 @@ Page({
       url: `${app.globalData.host}api/v1/activities/${id}`,
       success: res => {
         const activity = res.data;
-        if (!activity.error) this.setData({ activity });
+        if (!activity.error) this.setData({ activity, 
+        imgUrls: [activity.photo_1, activity.photo_2, activity.photo_3] });
       }
     })
   }
