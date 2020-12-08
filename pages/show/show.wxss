@@ -1,39 +1,27 @@
-/* pages/show/show.wxss */
-.image {
-  height: 250rpx;
-  width: 100%;
-  object-fit: cover;
-}
-
-.show-image {
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
-}
-
-/* .home-banener-box .wx-swiper-dot{
-  width: 26rpx;
-  height: 8rpx;
-  border-radius:3rpx;
-  background: #ccc;
-}
-.home-banener-box .wx-swiper-dot-active{
-  background: #fff;
-} */
-
 .show-banner {
   display: flex;
-  flex-direction: row;
-  }
+  justify-content: space-between;
+  margin: 15rpx 0rpx 0rpx 40rpx;
+}
 
 .activity-title {
   font-size: 45rpx;
   color: #4A7FB0;
   font-weight: bold;
   padding-right: 111px;
-
+  margin-top: 10rpx;
 }
+
 .activity-heart {
   height: 34px; 
   width: 20px;
+}
+
+
+.activity-heart {
+  height: 80rpx; 
+  width: 60rpx;
+  margin-right: 40rpx;
 }
 
 .activity-log {
@@ -73,7 +61,6 @@
     text-align: center;
     border-radius: 6%;
     margin-right: 15%;
-
   }
 
   .address {
@@ -137,7 +124,6 @@
   height: 65px;
   border-radius: 50%;
   margin-right: 5px;
-  /* margin-left: 3%; */
 }
 
 .instructor-name {
