@@ -15,7 +15,7 @@
 <!-- <view class="activity-title">Activity Title</view> -->
 <view class="show-banner"> 
   <view class="activity-title>">{{activity.title}}</view>
-  <image class="activity-heart" mode="aspectFit" src="../images/heart.jpg"> </image>
+  <image class="activity-heart" mode="aspectFit" src="{{ activity.favorited ? '../images/fullheart.png' : '../images/heart.jpg'}}"> </image>
 </view>
 
 
