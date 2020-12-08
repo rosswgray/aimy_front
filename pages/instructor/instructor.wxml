@@ -1,22 +1,22 @@
 <view class="page">
+
 <view class="container-top">
-  
-  <button style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 30rpx;" bindtap="goBack" > back </button>
   <view class="instructor-banner" style="background">
-    <view class="avatar-confirmation">
-      <image class="avatar-large" alt="avatar-large" src="../images/instructor.png" /><icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
-    </view>
-    <view class="h1-name"><text> Brigita</text></view>
+      <image class="avatar-large" alt="avatar-large" src="../images/instructor.png"></image>
+      <view class="h1-name"><text> Brigita</text></view>
   </view>
 </view>
+
 <view class="container-info">
   <view class="info">
-    <view class="h1">
-      <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
-      <text> Bio </text></view>
-    <view class="p"><text> I have been swimming since I was a child and have always loved being in the water. Although I never had formal lessons myself, I joined the swim team in high school. After high school, I missed swimming so much that I decided to become a lifeguard.
+    <view class="h1"><text> Bio </text></view>
+      <view class="p">
+          <text> 
+              I have been swimming since I was a child and have always loved being in the water. Although I never had formal lessons myself, I joined the swim team in high school. After high school, I missed swimming so much that I decided to become a lifeguard.
 
-    Soon after becoming a lifeguard, I began teaching swim lessons and have continued to do so for the past several years. I teach swimming because I think it is a very important skill to have.</text></view>
+              Soon after becoming a lifeguard, I began teaching swim lessons and have continued to do so for the past several years. I teach swimming because I think it is a very important skill to have.
+          </text>
+      </view>
     </view>
   </view>
 
@@ -32,16 +32,18 @@
     </view>
   </view>
 </view>  
-<!-- SESSIONS CARDS -->
+</view> 
+
+<!-- SESSIONS CARDS
 <view class="container-info">
   <view class="info">
-      <view class="upcoming">
+      <view class="upcoming"> -->
         <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
-        <text class="h1"> Upcoming sessions </text>
+        <!-- <text class="h1"> Upcoming sessions </text>
       </view>
       <view wx:for="{{activity.sessions}}" wx:for-item="session" >
           <sessions-card activity="{{session}}" />
       </view>
     </view>
   </view>
-</view>
+</view> -->
