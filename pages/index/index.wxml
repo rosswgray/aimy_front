@@ -43,24 +43,24 @@
 </view>
 
 <!-- AGE SELECTOR -->
-<view class="section2">
+<!-- <view class="section2">
   <view class="section__title"></view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
       Age <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
     </view>
   </picker>
-</view>
+</view> -->
 
 <!-- AREA SELECTOR -->
-<view class="section3">
+<!-- <view class="section3">
   <view class="section__title"></view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
       District <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
     </view>
   </picker>
-</view>
+</view> -->
 </view>
 
 <!-- CARDS SELECTOR-->

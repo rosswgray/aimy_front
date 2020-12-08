@@ -83,10 +83,10 @@
 </view>
 
 
-<!-- SESSIONS CARDS -->
+<!-- SESSIONS CARDS
 <view class="sessions-card-container">
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" >
     <sessions-card activity="{{session}}" />
   </view>
-</view>
+</view> -->
