@@ -5,7 +5,6 @@ Page({
 
 
   data: {
-    loggedIn: false,
     activeTab: 0
   },
 
@@ -20,25 +19,23 @@ Page({
     // put request to update userinfo on the backend
   },
 
-  onLoad: function (options) {
-    
-    const page = this; 
-    page.setData({
-      hasUserInfo: globalData.hasUserInfo,
-      userInfo: globalData.userInfo
-    })
+  getBookings: function() {
+    let user = this.data.user
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${globalData.user_id}/bookings`,
-      success: function(res) {
-        console.log(res)
-        page.setData(res.data)
+      url: `${getApp().globalData.host}api/v1/users/${user.id}/bookings`,
+      success: (res) => {
+        this.setData({bookings: res.data.bookings})
       }
-      })
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+  onLoad: function (options) {
+    const user = wx.getStorageSync('user')
+    this.setData({user});
+    this.getBookings();
+  },
+
+
   onReady: function () {
 
   },
