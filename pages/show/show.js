@@ -69,9 +69,7 @@ Page({
       latitude: this.data.activity.latitude,
       longitude: this.data.activity.longitude,
     })
-    // wx.navigateTo({
-    //   url: '/pages/map/map',
-    // })
+
   },
 
   goToBio: function() {
@@ -81,13 +79,9 @@ Page({
   },
 
   onLoad: function (options) {
-    // console.log("Options", options)
-    const page = this
     const user_id = getApp().globalData.user_id
     this.setData({user_id})
-    this.setData({
-      hasUserInfo: globalData.hasUserInfo
-    })
+    this.setData({ hasUserInfo: globalData.hasUserInfo })
     const id = options.id
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,

@@ -2,12 +2,12 @@
 
 <view data-id='{{activity.id}}' class="sessions-card">
   <view class="img-info" style="flex-shrink: 0;">
-    <image mode="aspectFill" src="/pages/images/workout-coach.jpg" 
+    <!-- <image mode="aspectFill" src="/pages/images/workout-coach.jpg" 
       placeholder="Instructor Avatar" 
-      class="instructor-avatar" style="flex-shrink: 0;"></image>
-
-      <!-- <image mode="aspectFill" src="{{userInfo.avatarUrl}}" placeholder="Instructor Avatar" 
       class="instructor-avatar" style="flex-shrink: 0;"></image> -->
+
+    <image mode="aspectFill" src="{{userInfo.avatarUrl || 'https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512'}}" placeholder="Instructor Avatar" 
+      class="instructor-avatar" style="flex-shrink: 0;"></image>
     
     <view class="card-info">
       <view class="provider-name">Ross Gray</view>
@@ -27,7 +27,7 @@
       <button class="button" style="width: 5px;">Book</button>
     </view> -->
     <navigator wx:if="{{hasUserInfo}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
-        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
+        <button class="btn" wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
    
 
   </view>
