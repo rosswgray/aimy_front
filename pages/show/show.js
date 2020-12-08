@@ -29,6 +29,8 @@ Page({
   },
 
   confirmBooking: function(e){
+    console.log(e);
+
     let session_id = e.target.dataset.id;
     let activity_id = this.data.activity.id;
     let user = this.data.user;
@@ -39,6 +41,7 @@ Page({
    },
 
    bindGetUserInfo: function (e) {
+    console.log(e);
     let session_id = e.target.dataset.id;
     let activity_id = this.data.activity.id;
     let userInfo = e.detail.userInfo;
