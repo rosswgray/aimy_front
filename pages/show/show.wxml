@@ -41,8 +41,8 @@
     <!-- Buttons -->
     <view class="btn-container">
       <button class="btn btn-share" open-type="share">Share</button>
-      <button wx:if="{{ user.hasInfo }}" bindtap="goToConfirm" class="btn btn-book">Book</button>
-      <button wx:else class="btn btn-book" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >Book</button>
+      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activity.sessions[0].session_id}}" class="btn btn-book">Book</button>
+      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activity.sessions[0].session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
     </view>
   </view>
 </view>

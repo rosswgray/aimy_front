@@ -28,50 +28,35 @@ Page({
     duration: 1000
   },
 
-  goToConfirm: function(e){
-    const session_id = e.currentTarget.dataset.id;
-    const page = this
-    console.log("im in goToConfirm", session_id)
-    wx.navigateTo({
-      url: `/pages/confirmation/confirmation?user_id=${page.data.user_id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
-    }) 
-   },
+  confirmBooking: function(e){
+    let session_id = e.target.dataset.id;
+    let activity_id = this.data.activity.id;
+    let user = this.data.user;
 
-   goToConfirmAfterLogin: function(id){
-    const session_id = id;
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?user_id=${this.data.user_id}&sessionid=${session_id}&activity_id=${this.data.activity.id}`,
+      url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
     }) 
    },
 
    bindGetUserInfo: function (e) {
-    const user = wx.getStorageSync('user');
+    let session_id = e.target.dataset.id;
+    let activity_id = this.data.activity.id;
+    let userInfo = e.detail.userInfo;
 
-    console.log(e);
+    if (userInfo) {
+      let user = wx.getStorageSync('user');
+      user['userInfo'] = userInfo;
+      user.hasInfo = true;
+      this.setData({user});
+      wx.setStorageSync('user', user);
 
-
-    let userInfo = e.detail.userInfo
-    let sessionId = e.target.dataset.id
-    if (userInfo == undefined){
-      
-    } else {
-      this.setData({
-        userInfo: userInfo,
-        hasUserInfo: true
-      })
-      globalData.hasUserInfo = true
-      globalData.userInfo = userInfo
-
-      this.confirmBooking(session_id)
+      wx.navigateTo({
+        url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
+      }) 
     }
-
-    // Pseudo Code: 
-    // 1. Add a session ID to the green button (data-sesssionid)
-    // 2. Create ONE confirmBooking funciton that navigates to the proper confirmation page
-    // 
-    // put request to update userinfo on the backend
   },
 
+  // GO TO MAP
   goToMap: function() {
     wx.openLocation({
       latitude: this.data.activity.latitude,
@@ -80,12 +65,15 @@ Page({
 
   },
 
+
+  // INSTRUCTOR BIO
   goToBio: function() {
   wx.navigateTo({
         url: '/pages/instructor/instructor',
       })
   },
 
+  // GET ACTIVITY ID
   getActivities: function (id) {
     const app = getApp();
     wx.request({
@@ -104,6 +92,7 @@ Page({
     this.setData({user});
   },
 
+  // SHARE ACTIVITY
   onShareAppMessage: function () {
     return {
       title: this.data.activity.name,
