@@ -28,57 +28,54 @@ Page({
     duration: 1000
   },
 
-  goToConfirm: function(e){
-    console.log(e)
-    const session_id = e.currentTarget.dataset.id;
-    const page = this
-    console.log(e)
+  confirmBooking: function(e){
+    let session_id = e.target.dataset.id;
+    let activity_id = this.data.activity.id;
+    let user = this.data.user;
+
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
     }) 
    },
 
-   getUserInfo: function(e){
-    let userInfo = e.detail.userInfo
-    if (userInfo == undefined){
-      
-    } else {
-      this.setData({
-        userInfo: userInfo,
-        hasUserInfo: true
-      })
-      globalData.hasUserInfo = true
-      globalData.userInfo = userInfo
-      this.goToConfirm()
+   bindGetUserInfo: function (e) {
+    let session_id = e.target.dataset.id;
+    let activity_id = this.data.activity.id;
+    let userInfo = e.detail.userInfo;
+
+    if (userInfo) {
+      let user = wx.getStorageSync('user');
+      user['userInfo'] = userInfo;
+      user.hasInfo = true;
+      this.setData({user});
+      wx.setStorageSync('user', user);
+
+      wx.navigateTo({
+        url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
+      }) 
     }
-    // put request to update userinfo on the backend
   },
 
+  // GO TO MAP
   goToMap: function() {
     wx.openLocation({
       latitude: this.data.activity.latitude,
       longitude: this.data.activity.longitude,
     })
-    // wx.navigateTo({
-    //   url: '/pages/map/map',
-    // })
+
   },
 
+
+  // INSTRUCTOR BIO
   goToBio: function() {
   wx.navigateTo({
         url: '/pages/instructor/instructor',
       })
   },
 
-  onLoad: function (options) {
-    // console.log("Options", options)
-    const page = this
-    const user = getApp().globalData.user
-    this.setData({user})
-    this.setData({
-      hasUserInfo: globalData.hasUserInfo
-    })
-    const id = options.id
+  // GET ACTIVITY ID
+  getActivities: function (id) {
+    const app = getApp();
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,
       success: res => {
@@ -87,5 +84,19 @@ Page({
         imgUrls: [activity.photo_1, activity.photo_2, activity.photo_3] });
       }
     })
+  },
+
+  onLoad: function (options) {
+    const user = wx.getStorageSync('user');
+    this.getActivities(options.id);
+    this.setData({user});
+  },
+
+  // SHARE ACTIVITY
+  onShareAppMessage: function () {
+    return {
+      title: this.data.activity.name,
+      path: `/pages/show/show?id=${this.data.activity.id}`,
+    }
   }
 })

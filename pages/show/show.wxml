@@ -1,94 +1,56 @@
 <!-- SWIPER  -->
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <view class="slider-parent" style="height: 600rpx;">
-        <image src="{{item}}" class="slide-image" style="width: 100%; height: 400rpx;"/>
-     </view>
-    </swiper-item>
-  </block>
+  <swiper-item wx:for="{{imgUrls}}">
+    <view class="slider-parent" style="height: 600rpx;">
+      <image src="{{item}}" class="slide-image" style="width: 100%; height: 400rpx;"/>
+    </view>
+  </swiper-item>
 </swiper>
 
-
-<!-- ACTIVITY TITLE -->
-<!-- <view class="activity-title">Activity Title</view> -->
-<view class="show-banner"> 
-  <view class="activity-title>">{{activity.title}}</view>
-  <image class="activity-heart" mode="aspectFit" src="{{ activity.favorited ? '../images/fullheart.png' : '../images/heart.jpg'}}"> </image>
-</view>
-
-
-<!-- TOP INFO: PRICE / LEFT SPOTS / BOOK BTN -->
-<view class="container-top">
-  <!-- <view>
-    <view style="color: #4A7FB0; font-size: 35rpx;">¥ 200</view>
-    <view style="color:#FE354C; weight: bold;">2 spots left!</view>
-  </view> -->
-  <!-- <view class="container-book">
-    <navigator bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button">Book</navigator>
-  </view> -->
-</view>
-
-<!-- ACTIVITY LOGISTICS -->
-<view>
-  <view class="activity-log">  
-      <view class="date-and-book">
-        <!-- <view class="date"> {{activity.date}}</view> -->
-        <view class="date">
-          <view style="padding-bottom: 15rpx;">Tomorrow</view>
-          <view>{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
-        </view>
-        <navigator wx:if="{{hasUserInfo}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
-        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 35rpx 22rpx; margin: 0; width: 145rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
-      </view>
-        <!-- <view class="location">{{activity.location}}</view> -->
-      <view class="location">188 Shannxi North Road</view>
-        <view class="address">
-          <view class="location">地址：陕西北路188号</view>
-            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > VIEW MAP </button>
-        </view>
+<view class="container">
+  <!-- Info Container-->
+  <view class="info-container">
+    <view class="title">{{activity.title}}</view>
+    <view class="body">{{activity.date}}</view>
+    <view class="body">{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
+    <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>
     
+    <!-- Description -->
+    <view class="sub-title">Description</view>
+    <view class="body">{{activity.description}}</view>
 
+    <!-- Signups -->
+    <view class="sub-title">Sign Ups</view>
+    <progress class="progress" percent="80" stroke-width="8" color="#63EB34" />
+    <view class="flex-justify-between body">
+      <view>8 attendees</view>
+      <view>10</view>
+    </view>
+
+    <!-- Instructor -->
+    <view class="sub-title">Instructor</view>
+    <view class="instructor-container" bindtap="goToBio">
+      <image class="avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
+      <view class="flex-column-centered">
+        <view class="sub-title" style="margin-top: 0;">{{activity.organizer.name}}</view>
+        <view class="body" style="margin-bottom: 0;">✆ 182-888-8888</view>
       </view>
-</view>
-<!-- CAPACITY INFO -->
-<view class="flex-progress">
-  <progress class="progress" percent="80" stroke-width="8" color="#63EB34" />
-</view>
-<view class="flex-capacity">
-  <view style="color: #4A7FB0"> 8 attendees </view>
-  <view style="color: #4A7FB0"> 10 </view>
-</view>
+    </view>
 
-
-<!-- INSTRUCTOR INFO -->
-<view class="instructor-view">
-  <icon class="icon" color="rgb(99,235,52)" type="success" size="25"/>
-  <view class="avatar-view"> 
-    <image class="instructor-avatar" alt="avatar-large" src="https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512"/>
-
-  
-    <view>
-      <text class="instructor-name">{{activity.organizer.name}}</text>
-      <view style="color: #4A7FB0; font-size: 30rpx;">✆ 182-888-8888</view>
+    <!-- Buttons -->
+    <view class="btn-container">
+      <button class="btn btn-share" open-type="share">Share</button>
+      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activity.sessions[0].session_id}}" class="btn btn-book">Book</button>
+      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activity.sessions[0].session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
     </view>
   </view>
-  <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToBio" > VIEW BIO </button>
 </view>
 
-
-<!-- ACTIVITY DESCRIPTION -->
-<view class="activity-description">
-  <view class="description-h2">Description</view>
-  <text class="description-p">{{activity.description}}</text>
-</view>
-
-
-<!-- SESSIONS CARDS
+<!-- Session Descriptions -->
 <view class="sessions-card-container">
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" >
     <sessions-card activity="{{session}}" />
   </view>
-</view> -->
+</view>

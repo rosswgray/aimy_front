@@ -89,7 +89,7 @@
    justify-content: space-between;
  }
 
- button {
+ .btn {
    background-color:  #0ea094;
    color: white;
    font-weight: bold;

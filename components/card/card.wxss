@@ -65,6 +65,12 @@
   margin-bottom: 10rpx;
 }
 
+.activity-heart {
+  height: 45rpx;
+  width: 45rpx;
+  margin-right: 10rpx;
+}
+
 .capacity {
   font-weight: bolder;
   font-size: 30rpx;

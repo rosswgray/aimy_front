@@ -20,7 +20,7 @@ Page({
 
     });
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${this.data.userid}/bookings`,
+      url: `${getApp().globalData.host}api/v1/users/${this.data.user_id}/bookings`,
       method: 'POST',
       data: {session_id: this.data.sessionid},
       success: res => {
@@ -30,30 +30,24 @@ Page({
     // create a booking
   },
 
-
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-    console.log(options);
-    const page = this;
-    page.setData(options)
+  getActivity: function (activity_id) {
     wx.request({
-      url: `${getApp().globalData.host}api/v1/activities/${options.activity_id}`,
+      url: `${getApp().globalData.host}api/v1/activities/${activity_id}`,
       success: res => {
         const activity = res.data;
         if (!activity.error) this.setData({ activity });
-        console.log(activity)
     }});
-
-    // postBooking
-    
-    // console.log("testing", options)
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+  onLoad: function (options) {
+    let activity_id = options.activity_id;
+    let session_id = options.sessions_id;
+
+    this.setData({ session_id });
+    this.getActivity(activity_id);
+  },
+
+
   onReady: function () {
 
   },
