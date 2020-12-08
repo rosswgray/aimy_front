@@ -28,7 +28,7 @@ Page({
       userInfo: globalData.userInfo
     })
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${globalData.user.id}/bookings`,
+      url: `${getApp().globalData.host}api/v1/users/${globalData.user_id}/bookings`,
       success: function(res) {
         console.log(res)
         page.setData(res.data)

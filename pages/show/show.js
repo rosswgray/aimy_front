@@ -33,7 +33,7 @@ Page({
     const page = this
     console.log("im in goToConfirm", session_id)
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      url: `/pages/confirmation/confirmation?user_id=${page.data.user_id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
     }) 
    },
 
@@ -41,7 +41,7 @@ Page({
     const session_id = id;
     const page = this
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?userid=${page.data.user.id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
+      url: `/pages/confirmation/confirmation?user_id=${page.data.user_id}&sessionid=${session_id}&activity_id=${page.data.activity.id}`,
     }) 
    },
 
@@ -83,8 +83,8 @@ Page({
   onLoad: function (options) {
     // console.log("Options", options)
     const page = this
-    const user = getApp().globalData.user
-    this.setData({user})
+    const user_id = getApp().globalData.user_id
+    this.setData({user_id})
     this.setData({
       hasUserInfo: globalData.hasUserInfo
     })

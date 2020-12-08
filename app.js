@@ -3,8 +3,8 @@ App({
   
   globalData: {
     userInfo: null,
-    // host: 'https://aimy.wogengapp.cn/',
-    host: 'http://localhost:3000/',
+    host: 'https://aimy.wogengapp.cn/',
+    // host: 'http://localhost:3000/',
   },
 
 
@@ -20,7 +20,7 @@ App({
           },
           success: (res) => {
             console.log("testing login", res)
-            getApp().globalData.user = res.data.user
+            getApp().globalData.user_id = res.data.user_id
           }
         })
       }

@@ -20,7 +20,7 @@ Page({
 
     });
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${this.data.userid}/bookings`,
+      url: `${getApp().globalData.host}api/v1/users/${this.data.user_id}/bookings`,
       method: 'POST',
       data: {session_id: this.data.sessionid},
       success: res => {
