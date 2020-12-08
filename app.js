@@ -36,11 +36,13 @@ App({
               wx.setStorageSync('user', user)
             }
           })
+          this.globalData.hasUserInfo = true
         } else {
           const user = {
             id: user_id,
             hasInfo: false
           }
+          this.globalData.hasUserInfo = false
           wx.setStorageSync('user', user)
         }
       }

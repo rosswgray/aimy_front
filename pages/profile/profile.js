@@ -23,12 +23,14 @@ Page({
   onLoad: function (options) {
     
     const page = this; 
+    let id = wx.getStorageSync('user').id
+    console.log("checking if hasYser", globalData)
     page.setData({
       hasUserInfo: globalData.hasUserInfo,
       userInfo: globalData.userInfo
     })
     wx.request({
-      url: `${getApp().globalData.host}api/v1/users/${globalData.user_id}/bookings`,
+      url: `${getApp().globalData.host}api/v1/users/${id}/bookings`,
       success: function(res) {
         console.log(res)
         page.setData(res.data)
