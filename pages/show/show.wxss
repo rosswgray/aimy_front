@@ -12,6 +12,11 @@
   margin-top: 10rpx;
 }
 
+.activity-heart {
+  height: 34px; 
+  width: 20px;
+}
+
 
 .activity-heart {
   height: 80rpx; 
@@ -52,7 +57,7 @@
     background-color:  #0ea094;
     color: white;
     font-weight: bold;
-    font-size: 30rpx;
+    font-size: 35rpx;
     text-align: center;
     border-radius: 6%;
     margin-right: 15%;
@@ -70,7 +75,7 @@
 }
 
 .btn-map {
-  background-color: #E5E5E5;  
+  background-color: white;  
   font-size: 10px;
   border-radius: 5px;
   color: black;

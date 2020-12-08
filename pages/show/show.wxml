@@ -40,14 +40,16 @@
           <view>{{activity.sessions[0].start_hour}}:00 - {{activity.sessions[0].end_hour}}:00</view>
         </view>
         <navigator wx:if="{{hasUserInfo}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
-        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
+        <button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 35rpx 22rpx; margin: 0; width: 145rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
       </view>
         <!-- <view class="location">{{activity.location}}</view> -->
       <view class="location">188 Shannxi North Road</view>
         <view class="address">
           <view class="location">地址：陕西北路188号</view>
-            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > view map </button>
+            <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToMap" > VIEW MAP </button>
         </view>
+    
+
       </view>
 </view>
 <!-- CAPACITY INFO -->
@@ -72,7 +74,7 @@
       <view style="color: #4A7FB0; font-size: 30rpx;">✆ 182-888-8888</view>
     </view>
   </view>
-  <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToBio" > view bio </button>
+  <button class="btn-map" style="padding: 15rpx 20rpx; margin: 0; width: 150rpx; font-size: 20rpx;" bindtap="goToBio" > VIEW BIO </button>
 </view>
 
 
