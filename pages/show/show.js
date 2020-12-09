@@ -33,7 +33,6 @@ Page({
     
   },
 
-<<<<<<< HEAD
   percentFull(session) {
     let percentage = session.bookings / session.capacity
     return percentage * 100
@@ -51,7 +50,8 @@ Page({
         heartImage: "/../pages/images/fullheart.png"
       })
     }
-=======
+  },
+
   favActivity() {
     wx.request({
       url: `${app.globalData.host}api/v1/favorite`,
@@ -64,7 +64,6 @@ Page({
         console.log(res) ;
       }
     })
->>>>>>> 31482d7d096bb4a37402f70e88bc55a2e131c82f
   },
 
   unfavActivity() {
@@ -167,6 +166,7 @@ onLoad: function (options) {
     const user = wx.getStorageSync('user');
     this.getActivities(options.id, user.id);
     this.setData({user});
+    this.selectSession({detail: 0})
   },
 
   // SHARE ACTIVITY
