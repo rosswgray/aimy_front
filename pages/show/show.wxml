@@ -25,7 +25,7 @@
     
     <!-- Description -->
     <view class="sub-title">Description</view>
-    <view class="body">{{activity.description}}</view>
+    <view class="body {{hideDescription ? 'hidden-container' : ''}}" bindtap="toggleHiddenDescription">{{activity.description}}</view>
 
     <!-- Signups -->
     <view class="sub-title">Sign Ups</view>
@@ -48,8 +48,8 @@
     <!-- Buttons -->
     <view class="btn-container">
       <button class="btn btn-share" open-type="share">Share</button>
-      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activity.sessions[0].session_id}}" class="btn btn-book">Book</button>
-      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activity.sessions[0].session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
+      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activeSession.session_id}}" class="btn btn-book">Book</button>
+      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activeSession.session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
     </view>
   </view>
 </view>
@@ -58,11 +58,12 @@
 <view class="sessions-card-container">
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" wx:key="{{index}}">
-    <sessions-card 
+    <sessions-card
+      data-id="{{session.session_id}}"
       activity="{{session}}" 
       arrayIdx="{{index}}"
       activeIdx="{{activeSession}}"
-      bindselectSession="selectSession"
+      bindtap="selectSession"
     />
   </view>
 </view>
