@@ -23,9 +23,7 @@
   <view class="right-box">
     <view class="div-line"></view>
     <view wx:if="{{isInstructor}}">I'm an instructor!</view>
-    <!-- <view wx:else class="activity-book">
-      <button class="button" style="width: 5px;">Book</button>
-    </view> -->
+
     <button class="btn " wx:if="{{!forProfile}}" bindtap="selectSession" style="padding: 40rpx 20rpx; margin: 0; width: 110rpx;" disabled="{{arrayIdx == activeIdx}}" url="#" data-id="{{arrayIdx}}"  class="btn">Select</button>
    
 

@@ -4,13 +4,20 @@
     <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
       style="flex-shrink: 0;"></image>
-    <!-- <text class="activity-price">¥{{activity.price}}</text> -->
+   
   </view>
     <view class="card-info">
       <view class="activity-title-provider">
         <view class="activity-title>">{{activity.title}}</view>
         <view class="provider-name"> by {{activity.organizer.name}}</view>
       </view>
+      <view class="activity-title-right"> 
+        <view class="body">{{activity.num_of_favs}}</view>
+         <image class="activity-heart" mode="aspectFit" src='/../pages/images/heart.jpg'> </image>
+       </view>
+    </view>
+
+
       <view class="activity-log">
         <!-- <view class="heart-div">
           <image class="activity-heart" mode="aspectFit" src="/../pages/images/heart.jpg"> </image>
@@ -19,5 +26,5 @@
         <!-- <view class="location">{{activity.location}}</view> -->
       </view>
   </view>
-</view>
+
 

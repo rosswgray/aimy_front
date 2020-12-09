@@ -16,8 +16,8 @@
  }
 
  .instructor-avatar {
-  border-radius: 5px;
-  box-shadow: grey;
+  /* border-radius: 5px;
+  box-shadow: grey; */
   height: 100%;
   width: 75px;
 }
@@ -60,11 +60,11 @@
  .selected {
   background-color: grey;
  }
-
+/* 
 .div-line {
   border-left: rgba(0, 0, 0, 0.1) 1px solid ;
   margin-right: 16rpx;
-}
+} */
 
  .activity-book {
    margin: 20rpx;
