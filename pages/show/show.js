@@ -21,14 +21,29 @@ Page({
     iconType: [
       'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
     ],
+    heartImage:  "/../pages/images/heart.jpg",
+    islike: false,
 
     // SWIPER 
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    
   },
-
+  switchHeart(){
+    if(this.data.islike){
+      this.setData({
+        islike: false,
+        heartImage: "/../pages/images/heart.jpg"
+      })
+    }else{
+      this.setData({
+        islike: true,
+        heartImage: "/../pages/images/fullheart.png"
+      })
+    }
+  },
   confirmBooking: function(e){
 
     let activity_id = this.data.activity.id;

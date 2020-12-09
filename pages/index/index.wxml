@@ -32,7 +32,7 @@
 <view class="section">
 
   <!-- TIME SELECTOR -->
-<view class="section1">
+<!-- <view class="section1">
   <view class="section__title"></view>
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
@@ -40,7 +40,7 @@
        {{date}}
     </view>
   </picker>
-</view>
+</view> -->
 
 <!-- AGE SELECTOR -->
 <!-- <view class="section2">

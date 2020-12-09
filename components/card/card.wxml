@@ -12,9 +12,9 @@
         <view class="provider-name"> by {{activity.organizer.name}}</view>
       </view>
       <view class="activity-log">
-        <view class="heart-div">
+        <!-- <view class="heart-div">
           <image class="activity-heart" mode="aspectFit" src="/../pages/images/heart.jpg"> </image>
-        </view>
+        </view> -->
         <view class="date"> {{activity.date}}</view>
         <!-- <view class="location">{{activity.location}}</view> -->
       </view>
