@@ -10,8 +10,14 @@
 
 <view class="container">
   <!-- Info Container-->
+  <view class="info-head">
+      <view class="title">{{activity.title}}</view>
+      <view class="heart-div" bindtap="switchHeart"> 
+        <image  class="activity-heart" mode="aspectFit" src="{{heartImage}}"> </image>
+      </view>
+  </view>
   <view class="info-container">
-    <view class="title">{{activity.title}}</view>
+
     <view class="body">{{activity.date}}</view>
     <view class="body">{{activity.sessions[activeSession].start_hour}}:00 - {{activity.sessions[activeSession].end_hour}}:00</view>
     <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>

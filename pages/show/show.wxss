@@ -209,4 +209,9 @@ font-weight: bold;
 margin-top: 30rpx;
 margin-bottom: 30rpx;
 }
-
+.info-head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  align-items: center;
+}
