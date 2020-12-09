@@ -14,6 +14,7 @@ Page({
       }]
     },
 
+
     iconSize: [20, 30, 40, 50, 60, 70],
     iconColor: [
       'red', 'orange', 'yellow', 'green', 'rgb(0,255,255)', 'blue', 'purple', 'rgb(99,235,52)'
@@ -31,6 +32,12 @@ Page({
     duration: 1000,
     
   },
+
+  percentFull(session) {
+    let percentage = session.bookings / session.capacity
+    return percentage * 100
+  },
+
   switchHeart(){
     if(this.data.islike){
       this.setData({
@@ -99,15 +106,21 @@ Page({
       success: res => {
         const activity = res.data;
         if (!activity.error) this.setData({ activity, 
-        imgUrls: [activity.photo_1, activity.photo_2, activity.photo_3] });
+        imgUrls: [activity.main_photo, activity.photo_1, activity.photo_2, activity.photo_3] });
       }
     })
   },
 
   selectSession: function(e){
-    let activeSession = e.detail
+    console.log("Hello Hi")
+    let activeSessionIndex = e.detail
+    let sessions = this.data.activity.sessions
+    let activeSession = sessions[activeSessionIndex]
+    console.log(activeSession, "Hello")
+    let percentFull = this.percentFull(activeSession)
     this.setData({
-      activeSession: activeSession
+      activeSession: activeSession,
+      percentFull: percentFull
     })
   },
 
