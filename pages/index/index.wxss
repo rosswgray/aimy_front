@@ -18,7 +18,14 @@ button {
 .banner-image {
   position: relative;
 }
-
+.img-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
+}
 .image-child {
   position: absolute;
   top: 25rpx;

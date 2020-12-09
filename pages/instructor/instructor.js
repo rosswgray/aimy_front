@@ -23,8 +23,18 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let id = options.id
+    let page = this
+    wx.request({
+      url: `${getApp().globalData.host}api/v1/instructors/${id}`,
+      success: function(res) {
+        console.log(res)
+        page.setData(res.data)
+      }
+    })
   },
+
+
 
   /**
    * Lifecycle function--Called when page is initially rendered
