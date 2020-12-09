@@ -20,7 +20,7 @@ Page({
       method: 'POST',
       data: {"session_id": this.data.session_id},
       success: res => {
-        wx.switchTab({ url: '/pages/profile/profile' });
+        wx.switchTab({ url: '/pages/profile/profile'});
       }
     })
   },
@@ -35,6 +35,7 @@ Page({
   },
 
   onLoad: function (options) {
+    console.log("checking options", options)
     let activity_id = options.activity_id;
     let session_id = options.session_id;
 

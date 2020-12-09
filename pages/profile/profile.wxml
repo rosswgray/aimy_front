@@ -26,8 +26,12 @@
   </view>
 
   <view class="tab-page" wx:if="{{activeTab == 0}}">
+    <view wx:if="{{bookings.length == 0}}">Make your first booking.</view>
     <view wx:for="{{bookings}}" wx:for-item="session" >
-    <sessions-card activity="{{session.sesssion}}" />
+    <sessions-card 
+      activity="{{session}}" 
+      forProfile="{{true}}"
+    />
   </view>
 
   </view>
