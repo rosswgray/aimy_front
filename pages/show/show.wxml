@@ -19,28 +19,28 @@
   </view>
   <view class="info-container">
 
-    <view class="body">{{activity.date}}</view>
-    <view class="body">{{activity.sessions[activeSession].start_hour}}:00 - {{activity.sessions[activeSession].end_hour}}:00</view>
-    <view class="address-container body" bindtap="goToMap">📍 {{activity.address}}</view>
+    <view class="body" style="font-size: 36rpx; font-weight: bold; margin-bottom: 0; margin-top: 0;">{{activeSession.date}}</view>
+    <view class="body" style="margin-top: 0;">{{activeSession.start_hour}}:00 - {{activeSession.end_hour}}:00</view>
+    <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>
     
     <!-- Description -->
     <view class="sub-title">Description</view>
-    <view class="body">{{activity.description}}</view>
+    <view class="body {{hideDescription ? 'hidden-container' : ''}}" bindtap="toggleHiddenDescription">{{activity.description}}</view>
 
     <!-- Signups -->
     <view class="sub-title">Sign Ups</view>
-    <progress class="progress" percent="80" stroke-width="8" color="#63EB34" />
+    <progress class="progress" percent="{{percentFull}}" stroke-width="8" color="#63EB34" />
     <view class="flex-justify-between body">
-      <view>8 attendees</view>
-      <view>10</view>
+      <view>{{activeSession.bookings}}</view>
+      <view>{{activeSession.capacity}}</view>
     </view>
 
     <!-- Instructor -->
     <view class="sub-title">Instructor</view>
-    <view class="instructor-container" bindtap="goToBio" data-instructor-id="{{activity.sessions[activeSession].instructor_id}}">
-      <image class="avatar" alt="avatar-large" src="{{activity.sessions[activeSession].instructor_pic}}"/>
+    <view class="instructor-container" bindtap="goToBio">
+      <image class="avatar" alt="avatar-large" src="{{activeSession.instructor_pic}}"/>
       <view class="flex-column-centered">
-        <view class="sub-title" style="margin-top: 0;">{{activity.sessions[activeSession].instructor_name}}</view>
+        <view class="sub-title" style="margin-top: 0;">{{activeSession.instructor_name}}</view>
         <view class="body" style="margin-bottom: 0;">✆ {{activity.organizer.phone_number}}</view>
       </view>
     </view>
@@ -48,8 +48,8 @@
     <!-- Buttons -->
     <view class="btn-container">
       <button class="btn btn-share" open-type="share">Share</button>
-      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activity.sessions[0].session_id}}" class="btn btn-book">Book</button>
-      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activity.sessions[0].session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
+      <button wx:if="{{ user.hasInfo }}" bindtap="confirmBooking" data-id="{{activeSession.session_id}}" class="btn btn-book">Book</button>
+      <button wx:else class="btn btn-book" open-type="getUserInfo" data-id="{{activeSession.session_id}}" bindgetuserinfo="bindGetUserInfo" >Book</button>
     </view>
   </view>
 </view>
@@ -58,11 +58,12 @@
 <view class="sessions-card-container">
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" wx:key="{{index}}">
-    <sessions-card 
+    <sessions-card
+      data-id="{{session.session_id}}"
       activity="{{session}}" 
       arrayIdx="{{index}}"
       activeIdx="{{activeSession}}"
-      bindselectSession="selectSession"
+      bindtap="selectSession"
     />
   </view>
 </view>
