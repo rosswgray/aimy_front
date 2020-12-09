@@ -44,63 +44,16 @@ Page({
       url: `${getApp().globalData.host}api/v1/users/${user.id}/bookings`,
       success: (res) => {
         this.setData({bookings: res.data.bookings})
-
       }
     })
   },
 
-  onLoad: function (options) {
+  onShow: function () {
     const user = wx.getStorageSync('user')
     this.setData({user});
     this.getBookings();
   },
 
-
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  },
   switchTab: function(e) {
     console.log("checking", e.currentTarget.dataset.tab)
     this.setData({
