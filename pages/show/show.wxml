@@ -36,7 +36,7 @@
 
     <!-- Instructor -->
     <view class="sub-title">Instructor</view>
-    <view class="instructor-container" bindtap="goToBio">
+    <view class="instructor-container" bindtap="goToBio" data-instructor-id="{{activity.sessions[activeSession].instructor_id}}">
       <image class="avatar" alt="avatar-large" src="{{activity.sessions[activeSession].instructor_pic}}"/>
       <view class="flex-column-centered">
         <view class="sub-title" style="margin-top: 0;">{{activity.sessions[activeSession].instructor_name}}</view>
