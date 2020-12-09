@@ -23,7 +23,6 @@
   <view class="container-info">
     <view class="info">
     <view class="h1"> 
-      <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
       <text> Qualifications & certifications </text>
     </view>
     <view class="p"> 
