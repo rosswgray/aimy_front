@@ -3,8 +3,8 @@ App({
   
   globalData: {
     userInfo: null,
-    host: 'https://aimy.wogengapp.cn/',
-    // host: 'http://localhost:3000/',
+    // host: 'https://aimy.wogengapp.cn/',
+    host: 'http://localhost:3000/',
   },
 
   login: function () {
