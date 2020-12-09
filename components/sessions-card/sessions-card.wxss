@@ -16,8 +16,8 @@
  }
 
  .instructor-avatar {
-  /* border-radius: 5px;
-  box-shadow: grey; */
+  border-radius: 5px;
+  box-shadow: grey;
   height: 100%;
   width: 75px;
 }

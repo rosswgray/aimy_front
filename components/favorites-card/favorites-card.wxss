@@ -24,7 +24,6 @@
 
  .card-info {
    padding: 19rpx;
-   /* margin: 5px; */
  }
 
  .provider-name {
@@ -36,24 +35,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-/* OLD INFO ON SESSION CARD */
-
-/* .activity-title {
-  font-size: 16px;
-  color: #4A7FB0;
-  font-weight: bolder;
-  max-width: 38vw;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
-
- /* .provider-name {
-   font-size: small;
-   font-weight: lighter;
-   line-height: 10rpx;
- } */
 
  .date-time {
    margin-top: 10px;
@@ -99,10 +80,6 @@
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  }
 
- /* .card-pricing {
-  font-weight: bolder;
-   color: #2A7AF1;
- } */
 
 
  
