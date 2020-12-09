@@ -2,11 +2,14 @@ Component({
   
   properties: {
     isInstructor: { type: Boolean, value: false },
-    activity: { type: Object, value: {} }
+    forProfile: { type: Boolean, value: false },
+    activity: { type: Object, value: {} },
+    arrayIdx: {type: Number, value: 0},
+    activeIdx: {type: Number, value: 0}
   },
 
   data: {},
-  
+
   methods: {
     goToConfirm: function(e){
       const session_id = e.currentTarget.dataset.id;
@@ -22,6 +25,12 @@ Component({
       wx.navigateTo({
         url: `/pages/confirmation/confirmation?user_id=${this.data.user_id}&sessionid=${session_id}&activity_id=${this.data.activity.id}`,
       }) 
+     },
+
+     selectSession: function(e){
+      let id = e.currentTarget.dataset.id
+      console.log("checking select", id)
+      this.triggerEvent("selectSession", id)
      },
   
      getUserInfo: function(e){

@@ -6,15 +6,15 @@
       placeholder="Instructor Avatar" 
       class="instructor-avatar" style="flex-shrink: 0;"></image> -->
 
-    <image mode="aspectFill" src="{{userInfo.avatarUrl || 'https://ca.slack-edge.com/T02NE0241-U01C6Q1297G-9ff34b007638-512'}}" placeholder="Instructor Avatar" 
+    <image mode="aspectFill" src="{{forProfile ? activity.session.instructor_pic : activity.instructor_pic}}" placeholder="Instructor Avatar" 
       class="instructor-avatar" style="flex-shrink: 0;"></image>
     
     <view class="card-info">
       <!-- <view class="provider-name">Ross Gray</view> -->
-      <view class="provider-name">{{activity.organizer.name}}</view>
+      <view class="provider-name">{{ forProfile ? activity.activty_title : activity.instructor_name}}</view>
       <view class="date-time">
-        <view class="date">{{activity.date}}</view>
-        <view class="time">{{activity.start_hour}}:00 - {{activity.end_hour}}:00</view>
+        <view class="date">{{forProfile ? activity.session.date : activity.date}}</view>
+        <view class="time">{{forProfile ? activity.session.start_hour : activity.start_hour}}:00 - {{forProfile ? activity.session.end_hour : activity.end_hour}}:00</view>
     </view>
 
     </view>
@@ -26,8 +26,7 @@
     <!-- <view wx:else class="activity-book">
       <button class="button" style="width: 5px;">Book</button>
     </view> -->
-    <navigator wx:if="{{hasUserInfo}}"bindtap="goToConfirm" open-type="navigate" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" class="booking-button" data-id="{{activity.sessions[0].session_id}}">Book</navigator>
-        <button class="btn" wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo" style="padding: 15rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{activity.sessions[0].session_id}}" class="booking-button">Book</button>
+    <button class="btn " wx:if="{{!forProfile}}" bindtap="selectSession" style="padding: 40rpx 20rpx; margin: 0; width: 110rpx;" disabled="{{arrayIdx == activeIdx}}" url="#" data-id="{{arrayIdx}}"  class="btn">Select</button>
    
 
   </view>

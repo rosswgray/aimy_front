@@ -3,6 +3,7 @@ const globalData = getApp().globalData;
 
 Page({
   data: {
+    activeSession: 0,
     activity: {
       sessions: [{
         title: 'Swim & Play Start Making waves',
@@ -29,14 +30,12 @@ Page({
   },
 
   confirmBooking: function(e){
-    console.log(e);
 
-    let session_id = e.target.dataset.id;
     let activity_id = this.data.activity.id;
     let user = this.data.user;
 
     wx.navigateTo({
-      url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
+      url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${this.data.activity.sessions[this.data.activeSession].session_id}&activity_id=${activity_id}`,
     }) 
    },
 
@@ -67,7 +66,6 @@ Page({
       latitude: this.data.activity.latitude,
       longitude: this.data.activity.longitude,
     })
-
   },
 
 
@@ -91,7 +89,14 @@ Page({
     })
   },
 
-  onLoad: function (options) {
+  selectSession: function(e){
+    let activeSession = e.detail
+    this.setData({
+      activeSession: activeSession
+    })
+  },
+
+onLoad: function (options) {
     const user = wx.getStorageSync('user');
     this.getActivities(options.id);
     this.setData({user});
