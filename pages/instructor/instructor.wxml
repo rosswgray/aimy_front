@@ -23,7 +23,7 @@
   <view class="container-info">
     <view class="info">
     <view class="h1"> 
-      <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
+   
       <text> Qualifications & certifications </text>
     </view>
     <view class="p"> 
@@ -34,16 +34,4 @@
 </view>  
 </view> 
 
-<!-- SESSIONS CARDS
-<view class="container-info">
-  <view class="info">
-      <view class="upcoming"> -->
-        <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
-        <!-- <text class="h1"> Upcoming sessions </text>
-      </view>
-      <view wx:for="{{activity.sessions}}" wx:for-item="session" >
-          <sessions-card activity="{{session}}" />
-      </view>
-    </view>
-  </view>
-</view> -->
+
