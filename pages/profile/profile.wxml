@@ -10,7 +10,7 @@
 <button class='login-button' wx:if="{{!user.hasInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Please log in</button>
 
 <view wx:else>
-  <view class="welcome">Welcome {{userInfo.nickName}}</view>
+  <view class="welcome">Welcome {{user.userInfo.nickName}}</view>
 </view>
 
 <!-- BOOKING BAR -->
