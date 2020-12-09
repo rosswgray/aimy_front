@@ -54,5 +54,5 @@
 
 <view class="button-div">
   <button bindtap="goToShow" open-type="navigate" url="#" class="disagree-button">Disagree</button>
-  <button bindtap="createBooking" class="agree-button">Agree</button>
+  <button bindtap="createBooking" class="agree-button" style="margin-left: 30rpx;">Agree</button>
 </view>

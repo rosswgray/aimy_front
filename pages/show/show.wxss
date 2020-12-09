@@ -4,6 +4,13 @@
   margin: 16rpx 0;
 }
 
+.title {
+  font-size: 48rpx;
+  color: #4A7FB0;
+  font-weight: bold;
+  margin-top: 8rpx;
+}
+
 .sub-title {
   font-size: 32rpx;
   color: #4A7FB0;

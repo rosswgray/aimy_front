@@ -39,17 +39,13 @@ Page({
       }
     })
   },
-//事件处理函数
 
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  }, 
   onLoad: function (options) {
+    let user_id = wx.getStorageSync('user').id
     const page = this; 
     wx.request({
       url: `${getApp().globalData.host}api/v1/activities/`,
+      body: {user_id: user_id},
       success: function(res) {
         console.log(res)
         const activities = res.data.activities
