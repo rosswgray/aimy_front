@@ -13,7 +13,8 @@
   <view class="info-head">
       <view class="title">{{activity.title}}</view>
       <view class="heart-div" bindtap="switchHeart"> 
-        <image  class="activity-heart" mode="aspectFit" src="{{heartImage}}"> </image>
+        <image  class="activity-heart" mode="aspectFit" src="{{ activity.is_faved ? '/../pages/images/fullheart.png' : '/../pages/images/heart.jpg'}}"> </image>
+        <view class="body">{{activity.num_of_favs}}</view>
       </view>
   </view>
   <view class="info-container">

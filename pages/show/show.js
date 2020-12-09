@@ -31,19 +31,43 @@ Page({
     duration: 1000,
     
   },
-  switchHeart(){
-    if(this.data.islike){
-      this.setData({
-        islike: false,
-        heartImage: "/../pages/images/heart.jpg"
-      })
-    }else{
-      this.setData({
-        islike: true,
-        heartImage: "/../pages/images/fullheart.png"
-      })
-    }
+
+  favActivity() {
+    wx.request({
+      url: `${app.globalData.host}api/v1/favorite`,
+      method: 'POST',
+      data: {
+        id: this.data.activity.id,
+        user_id: this.data.user.id 
+     },
+      success: res => {
+        console.log(res) ;
+      }
+    })
   },
+
+  unfavActivity() {
+    wx.request({
+      url: `${app.globalData.host}api/v1/unfavorite`,
+      method: 'POST',
+      data: {
+        id: this.data.activity.id,
+        user_id: this.data.user.id 
+     },
+      success: res => {
+        console.log(res) ;
+      }
+    })
+  },
+
+  switchHeart() {
+    this.favActivity()
+    this.data.activity.is_faved = !this.data.activity.is_faved
+    this.setData({
+      activity: this.data.activity
+    })
+  },
+
   confirmBooking: function(e){
 
     let activity_id = this.data.activity.id;
@@ -92,10 +116,11 @@ Page({
   },
 
   // GET ACTIVITY ID
-  getActivities: function (id) {
+  getActivities: function (id, userId) {
     const app = getApp();
     wx.request({
       url: `${app.globalData.host}api/v1/activities/${id}`,
+      data: {user_id: userId},
       success: res => {
         const activity = res.data;
         if (!activity.error) this.setData({ activity, 
@@ -113,7 +138,7 @@ Page({
 
 onLoad: function (options) {
     const user = wx.getStorageSync('user');
-    this.getActivities(options.id);
+    this.getActivities(options.id, user.id);
     this.setData({user});
   },
 
