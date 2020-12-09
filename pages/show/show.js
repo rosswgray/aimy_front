@@ -41,21 +41,23 @@ Page({
    },
 
    bindGetUserInfo: function (e) {
-    console.log(e);
-    let session_id = e.target.dataset.id;
-    let activity_id = this.data.activity.id;
-    let userInfo = e.detail.userInfo;
+    let user = wx.getStorageSync('user');
 
-    if (userInfo) {
-      let user = wx.getStorageSync('user');
-      user['userInfo'] = userInfo;
-      user.hasInfo = true;
-      this.setData({user});
-      wx.setStorageSync('user', user);
-
-      wx.navigateTo({
-        url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
-      }) 
+    if (!user.hasInfo) {
+      let session_id = e.target.dataset.id;
+      let activity_id = this.data.activity.id;
+      let userInfo = e.detail.userInfo;
+  
+      if (userInfo) {
+        user['userInfo'] = userInfo;
+        user.hasInfo = true;
+        this.setData({user});
+        wx.setStorageSync('user', user);
+  
+        wx.navigateTo({
+          url: `/pages/confirmation/confirmation?user_id=${user.id}&session_id=${session_id}&activity_id=${activity_id}`,
+        }) 
+      }
     }
   },
 

@@ -34,6 +34,9 @@ Page({
       success: function(res) {
         console.log(res)
         page.setData(res.data)
+      }
+    })
+  },
 
   getBookings: function() {
     let user = this.data.user
