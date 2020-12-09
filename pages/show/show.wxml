@@ -20,7 +20,7 @@
 
     <view class="body">{{activity.date}}</view>
     <view class="body">{{activity.sessions[activeSession].start_hour}}:00 - {{activity.sessions[activeSession].end_hour}}:00</view>
-    <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>
+    <view class="address-container body" bindtap="goToMap">📍 {{activity.address}}</view>
     
     <!-- Description -->
     <view class="sub-title">Description</view>
