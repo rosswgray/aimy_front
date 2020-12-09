@@ -13,14 +13,21 @@
   <view class="info-head">
       <view class="title">{{activity.title}}</view>
       <view class="heart-div" bindtap="switchHeart"> 
-        <image  class="activity-heart" mode="aspectFit" src="{{heartImage}}"> </image>
+        <image  class="activity-heart" mode="aspectFit" src="{{ activity.is_faved ? '/../pages/images/fullheart.png' : '/../pages/images/heart.jpg'}}"> </image>
+        <view class="body">{{activity.num_of_favs}}</view>
       </view>
   </view>
   <view class="info-container">
 
+<<<<<<< HEAD
     <view class="body" style="font-size: 36rpx; font-weight: bold; margin-bottom: 0; margin-top: 0;">{{activeSession.date}}</view>
     <view class="body" style="margin-top: 0;">{{activeSession.start_hour}}:00 - {{activeSession.end_hour}}:00</view>
     <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>
+=======
+    <view class="body">{{activity.date}}</view>
+    <view class="body">{{activity.sessions[activeSession].start_hour}}:00 - {{activity.sessions[activeSession].end_hour}}:00</view>
+    <view class="address-container body" bindtap="goToMap">📍 {{activity.address}}</view>
+>>>>>>> 31482d7d096bb4a37402f70e88bc55a2e131c82f
     
     <!-- Description -->
     <view class="sub-title">Description</view>
