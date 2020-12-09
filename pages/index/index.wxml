@@ -1,7 +1,8 @@
 <!-- BANNER -->
 <view class="banner_search">
 <view class="banner">
-  <image class="banner-image" style="width: 100vw; height: 30vh;" mode="aspectFill" src="../images/banner.jpg"> 
+  <image class="banner-image" style="width: 100vw; height: 30vh;" mode="aspectFill" src="../images/happy_balloon.jpg"> 
+    <view class="img-overlay"></view>
     <view class="image-child">
       <view style="font-size: large; color: white; font-weight: bolder;">Amazing activities,</view>
       <view style="font-size: large; color: white; font-weight: bolder;">just waiting for kids...</view>

@@ -2,8 +2,8 @@
 
 <view class="container-top">
   <view class="instructor-banner" style="background">
-      <image class="avatar-large" alt="avatar-large" src="../images/instructor.png"></image>
-      <view class="h1-name"><text> Brigita</text></view>
+      <image class="avatar-large" alt="avatar-large" src="{{instructor_pic}}"></image>
+      <view class="h1-name"><text> {{name}}</text></view>
   </view>
 </view>
 
@@ -27,23 +27,12 @@
       <text> Qualifications & certifications </text>
     </view>
     <view class="p"> 
+      <view><text> ✓ Total years of Experience: {{years_experience}} years </text></view>
+      <view><text> ✓ Year Started: {{date_started}} </text></view>
       <text> I currently hold my Lifeguarding, First Aid, and CPR-AED certificates.</text>
-      <view style="color: #4A7FB0; margin-top: 15rpx;"> 500 hr. Swimming instruction</view>
+      <view style="color: #4A7FB0; margin-top: 15rpx;"> Specialty Class: {{activity}} </view>
     </view>
   </view>
 </view>  
 </view> 
 
-<!-- SESSIONS CARDS
-<view class="container-info">
-  <view class="info">
-      <view class="upcoming"> -->
-        <!-- <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image> -->
-        <!-- <text class="h1"> Upcoming sessions </text>
-      </view>
-      <view wx:for="{{activity.sessions}}" wx:for-item="session" >
-          <sessions-card activity="{{session}}" />
-      </view>
-    </view>
-  </view>
-</view> -->

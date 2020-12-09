@@ -109,9 +109,12 @@ Page({
 
 
   // INSTRUCTOR BIO
-  goToBio: function() {
+  goToBio: function(event) {
+    console.log("test test")
+    console.log(event)
+    const id = event.currentTarget.dataset.instructorId
   wx.navigateTo({
-        url: '/pages/instructor/instructor',
+        url: `/pages/instructor/instructor?id=${id}`,
       })
   },
 
