@@ -75,7 +75,7 @@
  }
 
  .btn {
-   background-color:  #F86B8E;
+   background-color:  grey ;
    color: white;
    font-weight: bold;
    font-size: 24rpx;
