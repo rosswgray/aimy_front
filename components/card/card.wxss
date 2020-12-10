@@ -47,7 +47,6 @@
   font-size: 35rpx;
   font-weight: bold;
   max-width: 315px;
-  
 }
 
 .provider-name{
@@ -58,19 +57,6 @@
 
 .activity-log {
   align-items: right;
-}
-
-.date {
-  font-size: 20rpx;
-  font-weight: bold;
-  margin-bottom: 10rpx;
-}
-
-.activity-heart {
-  height: 45rpx;
-  width: 45rpx;
-  margin-right: 10rpx;
-  padding-left: 20 rpx;
 }
 
 .capacity {
@@ -87,9 +73,26 @@
 .info-head {
   justify-content: space-between;
 }
-.activity-title-right {
-  display: flex
+.container-heart-date {
 }
+
+.heart-div {
+  display: flex;
+}
+
+.activity-heart {
+  height: 45rpx;
+  width: 45rpx;
+  margin-right: 10rpx;
+  padding-left: 20 rpx;
+}
+
+.date {
+  font-size: 25rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
 .body {
   color: #979797;
   padding-right: 8px
