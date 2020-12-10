@@ -3,7 +3,7 @@
 <view class="container-top">
   <view class="instructor-banner" style="background">
       <image class="avatar-large" alt="avatar-large" src="{{instructor_pic}}"></image>
-      <view class="h1-name"><text> {{name}}</text></view>
+      <view class="h1-name"><text>{{name}}</text></view>
   </view>
 </view>
 

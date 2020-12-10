@@ -1,14 +1,18 @@
 Component({
-  
   properties: {
     isInstructor: { type: Boolean, value: false },
     forProfile: { type: Boolean, value: false },
     activity: { type: Object, value: {} },
     arrayIdx: {type: Number, value: 0},
-    activeIdx: {type: Number, value: 0}
+    sessionID: {type: String, value: null},
+    activeSession: {type: Object, value: {}},
   },
 
   data: {},
+  
+  ready: function(){
+    console.log("checking data", this.data)
+  },
 
   methods: {
     goToConfirm: function(e){
