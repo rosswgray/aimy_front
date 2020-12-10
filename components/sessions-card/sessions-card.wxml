@@ -36,8 +36,8 @@
     <view class="card-info">
       <view class="provider-name">{{ forProfile ? activity.activty_title : activity.instructor_name}}</view>
       <view class="date-time">
-        <view class="date">{{forProfile ? activity.session.date : activity.date}}</view>
-        <view class="time">{{forProfile ? activity.session.start_hour : activity.start_hour}}:00 - {{forProfile ? activity.session.end_hour : activity.end_hour}}:00</view>
+        <view class="date">{{forProfile ? activity.session.short_date : activity.session.short_date}}</view>
+        <view class="time">{{forProfile ? activity.session.start_time : activity.start_time}} - {{forProfile ? activity.session.end_time : activity.end_time}}</view>
     </view>
 
     </view>

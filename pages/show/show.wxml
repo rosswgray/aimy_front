@@ -20,7 +20,7 @@
   <view class="info-container">
 
     <view class="body" style="font-size: 36rpx; font-weight: bold; margin-bottom: 0; margin-top: 0;">{{activeSession.date}}</view>
-    <view class="body" style="margin-top: 0;">{{activeSession.start_hour}}:00 - {{activeSession.end_hour}}:00</view>
+    <view class="body" style="margin-top: 0;">{{activeSession.start_time}} - {{activeSession.end_time}}</view>
     <view class="address-container body" bindtap="goToMap">📍{{activity.address}}</view>
     
     <!-- Description -->
