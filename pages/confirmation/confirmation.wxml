@@ -6,14 +6,11 @@
 <view wx:for="{{activity.sessions}}" wx:for-item="session" >
 </view>
 
-
 <!-- ACTIVITY IMAGE -->
 <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
       placeholder="Child Development Activity" 
       style="flex-shrink: 0;">
 </image>
-
-
 
 <!-- TITLE / INSTRUCTOR / DATE -->
 <view class="title-instructor-date">
@@ -32,14 +29,10 @@
 <!-- WHAT TO BRING -->
 <view class="what-to-bring">
   <view class="bring-title">What to Bring</view>
-  <text>
-  1. Swimming Suit
-  2. Towel
-  3. Swim Goggles
-  4. Arm Floaties
-  </text>
+  <view wx:for="{{activity.requirements}}" wx:key="{{index}}">
+    <view>{{index + 1}}. {{item}}</view>
+  </view>
 </view>
-
 
 <view class="cancellation">
   <view class="can-title">Cancellation Policy</view>
