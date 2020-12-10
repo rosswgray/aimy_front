@@ -59,10 +59,11 @@
   <view class="upcoming-sessions">Upcoming Sessions</view>
   <view wx:for="{{activity.sessions}}" wx:for-item="session" wx:key="{{index}}">
     <sessions-card
+      sessionID="{{session.session_id}}"
       data-id="{{session.session_id}}"
-      activity="{{session}}" 
+      activity="{{session}}"
       arrayIdx="{{index}}"
-      activeIdx="{{activeSession}}"
+      activeSession="{{activeSession}}"
       bindtap="selectSession"
     />
   </view>
