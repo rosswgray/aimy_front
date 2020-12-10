@@ -13,7 +13,7 @@
   <view class="info-head">
       <view class="title">{{activity.title}}</view>
       <view class="heart-div" bindtap="switchHeart"> 
-        <image  class="activity-heart" mode="aspectFit" src="{{ activity.is_faved ? '/../pages/images/fullheart.png' : '/../pages/images/heart.jpg'}}"> </image>
+        <image  class="activity-heart" mode="aspectFit" src="{{ activity.is_faved ? '../images/fullheart.png' : '../images/heart.jpg'}}"> </image>
       </view>
   </view>
   <view class="info-container">
