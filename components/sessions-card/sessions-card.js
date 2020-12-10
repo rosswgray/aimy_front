@@ -2,10 +2,15 @@ Component({
   
   properties: {
     isInstructor: { type: Boolean, value: false },
+    forFav: { type: Boolean, value: false },
     forProfile: { type: Boolean, value: false },
     activity: { type: Object, value: {} },
     arrayIdx: {type: Number, value: 0},
     activeIdx: {type: Number, value: 0}
+  },
+
+  ready: function() {
+    console.log("checking fav-data", this.data)
   },
 
   data: {},

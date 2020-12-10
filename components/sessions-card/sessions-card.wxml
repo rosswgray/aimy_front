@@ -1,4 +1,32 @@
 <!--SESSIONS CARD-->
+
+<!-- FAV CARD -->
+<block wx:if="{{forFav}}">
+  <view data-id='{{activity.id}}' class="sessions-card">
+  <view class="img-info" style="flex-shrink: 0;">
+
+    <image mode="aspectFill" src="{{activity.main_photo}}" placeholder="Instructor Avatar" 
+      class="instructor-avatar" style="flex-shrink: 0;"></image>
+    
+    <view class="card-info">
+      <view class="provider-name">{{activity.organizer_name}}</view>
+      <view class="date-time">
+        <view class="date">{{activity.activity_title}}</view>
+        <!-- <view class="time">{{ activity.start_hour}}:00 - {{activity.end_hour}}:00</view> -->
+    </view>
+
+    </view>
+  </view>
+  <!-- <view class="right-box">
+    <view class="div-line"></view>
+    <view wx:if="{{isInstructor}}">I'm an instructor!</view>
+    <button class="btn " wx:if="{{!forProfile}}" bindtap="selectSession" style="padding: 40rpx 20rpx; margin: 0; width: 110rpx;" disabled="{{arrayIdx == activeIdx}}" url="#" data-id="{{arrayIdx}}"  class="btn">Select</button>
+  </view> -->
+</view>
+</block>
+
+<!-- BOOKING CARDS -->
+<block wx:else>
 <view data-id='{{activity.id}}' class="sessions-card">
   <view class="img-info" style="flex-shrink: 0;">
 
@@ -20,3 +48,4 @@
     <button class="btn " wx:if="{{!forProfile}}" bindtap="selectSession" style="padding: 40rpx 20rpx; margin: 0; width: 110rpx;" disabled="{{arrayIdx == activeIdx}}" url="#" data-id="{{arrayIdx}}"  class="btn">Select</button>
   </view>
 </view>
+</block>

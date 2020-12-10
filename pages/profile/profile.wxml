@@ -21,9 +21,9 @@
     <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
   </view>
 
-  <view class="tab-page" wx:if="{{activeTab == 1}}">
+  <!-- <view class="tab-page" wx:if="{{activeTab == 1}}">
     
-  </view>
+  </view> -->
 
   <view class="tab-page" wx:if="{{activeTab == 0}}">
     <view wx:if="{{bookings.length == 0}}">Make your first booking.</view>
@@ -33,8 +33,18 @@
       forProfile="{{true}}"
     />
   </view>
-
   </view>
+
+  <view class="tab-page" wx:if="{{activeTab == 1}}">
+    <view wx:if="{{bookings.length == 0}}">.</view>
+    <view wx:for="{{faved}}" wx:for-item="session" >
+      <sessions-card 
+        activity="{{session}}"
+        forFav="{{true}}"
+      />
+    </view>
+  </view>
+  
 </view>
 </view>
 
