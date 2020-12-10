@@ -161,6 +161,7 @@ Page({
 
   onLoad: function (options) {
     const user = wx.getStorageSync('user');
+    console.log("wendy was here", options.id)
     this.getActivities(options.id, user.id);
     this.setData({user});
   },

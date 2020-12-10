@@ -56,10 +56,19 @@ Page({
   goToShow: function (event) {
     console.log("check to show", event)
     let id = event.currentTarget.dataset.id
+    console.log(id)
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
     })
   },
+
+  // goToShow2: function (event) {
+  //   console.log("check to show", event)
+  //   let id = event.currentTarget.dataset.id
+  //   wx.navigateTo({
+  //     url: `/pages/show/show?id=${id}`,
+  //   })
+  // },
 
   getFav: function(){
     wx.request({
