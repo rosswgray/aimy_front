@@ -45,7 +45,7 @@
   <view class="right-box">
     <view class="div-line"></view>
     <view wx:if="{{isInstructor}}">I'm an instructor!</view>
-    <button class="btn {{activeSession.session_id == sessionID ? 'btn-active' : '' }}" wx:if="{{!forProfile}}"  bindtap="selectSession" style="padding: 40rpx 20rpx; margin: 0; width: 110rpx;" url="#" data-id="{{arrayIdx}}">{{activeSession.session_id == sessionID ? 'Active' : 'Select' }}</button>
+    <button class="btn {{activeSession.session_id == sessionID ? 'btn-active' : '' }}" wx:if="{{!forProfile}}"  bindtap="selectSession" style="    margin: 40rpx 10rpx; width: 75px;height: 70rpx; padding: 20rpx;" url="#" data-id="{{arrayIdx}}">{{activeSession.session_id == sessionID ? 'Active' : 'Select' }}</button>
   </view>
 </view>
 </block>
