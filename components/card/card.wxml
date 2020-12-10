@@ -17,7 +17,7 @@
         <view class="body">{{activity.num_of_favs}}</view>
         <image class="activity-heart" mode="aspectFit" src='/../pages/images/fullheart.png'></image>
       </view> 
-        <!-- <view class="date">2020-12-25</view> -->
+        <view class="date">Dec 5th</view>
     </view>
 
     </view>
