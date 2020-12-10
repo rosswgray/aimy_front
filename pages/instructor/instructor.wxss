@@ -9,7 +9,6 @@
 display: flex;
 align-items: center;
 justify-content: space-evenly;
-padding-left: 114px;
 }
 .avatar.confirmation {
   position: relative;
@@ -21,14 +20,12 @@ padding-left: 114px;
 }
 
 .instructor-banner {
-  /* background-color:white; */
   color: #4A7FB0;
   align-items: center;
   height: 300rpx;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-right: 220rpx;
 }
 
 .container-info {
@@ -39,7 +36,10 @@ overflow: hidden;
 background: white;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
 border-radius: 6rpx;
+}
 
+.instructor-name {
+  width: 100%;
 }
 
 .h1-name {
@@ -48,6 +48,7 @@ border-radius: 6rpx;
   font-size: 40rpx;
   color: #4A7FB0;
 }
+
 .image {
   border-radius: 50%;
   width: 100rpx;
