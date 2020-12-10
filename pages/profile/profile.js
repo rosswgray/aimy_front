@@ -53,6 +53,14 @@ Page({
     this.getBookings();
   },
 
+  goToShow: function (event) {
+    console.log("check to show", event)
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+  },
+
   getFav: function(){
     wx.request({
       url: `${globalData.host}api/v1/users/${this.data.user.id}`,
