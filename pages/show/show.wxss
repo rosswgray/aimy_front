@@ -57,10 +57,10 @@
 }
 
 .info-container > .hidden-container {
-  height: 240rpx;
-  overflow: hidden;
+  height: 140rpx;
   transition: all 1s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 
 .hidden-container::after {
@@ -70,8 +70,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(0deg, white, transparent);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   transition: all 1s ease-in-out;
+  z-index: 10;
 }
 
 .info-container > .instructor-container {
