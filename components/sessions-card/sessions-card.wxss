@@ -16,8 +16,8 @@
  }
 
  .instructor-avatar {
-  /* border-radius: 5px;
-  box-shadow: grey; */
+  border-radius: 5px;
+  box-shadow: grey;
   height: 100%;
   width: 75px;
 }
@@ -30,10 +30,13 @@
   font-size: 16px;
   color: #4A7FB0;
   font-weight: bolder;
-  max-width: 38vw;
+  max-width: 53vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 3rpx;
+  height: 33px;
+
 }
 
  .date-time {

@@ -23,7 +23,6 @@ Page({
   onLoad: function (options) {
     
     const page = this; 
-    let id = wx.getStorageSync('user').id
     console.log("checking if hasYser", globalData)
     page.setData({
       hasUserInfo: globalData.hasUserInfo,
@@ -54,10 +53,24 @@ Page({
     this.getBookings();
   },
 
+  getFav: function(){
+    wx.request({
+      url: `${globalData.host}api/v1/users/${this.data.user.id}`,
+      success: res=>{
+        console.log("checking fav", res.data.faved_activities)
+        this.setData({
+          faved: res.data.faved_activities
+        })
+      }
+    })
+  },
+
   switchTab: function(e) {
     console.log("checking", e.currentTarget.dataset.tab)
+    let activeTab = e.currentTarget.dataset.tab
     this.setData({
       activeTab: e.currentTarget.dataset.tab
     })
+    activeTab == 1 ? this.getFav() : ''
   }
 })
