@@ -78,7 +78,7 @@
 
 .heart-div {
   display: flex;
-  padding-left: 4rpx;
+  padding-left: 20rpx;
 }
 
 .activity-heart {
