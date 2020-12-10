@@ -5,7 +5,7 @@
     <view class="img-overlay"></view>
     <view class="image-child">
       <view style="font-size: large; color: white; font-weight: bolder;">Amazing activities,</view>
-      <view style="font-size: large; color: white; font-weight: bolder;">just waiting for kids...</view>
+      <view style="font-size: large; color: white; font-weight: bolder;">just waiting for families...</view>
       <views style="font-size: small; color: white; font-weight:lighter;"></views>
       <view style="font-size: small; color: white; font-weight: bold;"></view>
     </view>
@@ -23,45 +23,10 @@
 </view>
 </view>
 
-<!-- DROP DOWN MENU -->
-<!-- <view class="section">
-  <view class="section__title"></view>
-  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-    <view class="picker"> Date{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}{{multiArray[2][multiIndex[2]]}} </view>
-  </picker>
-</view> -->
 <view class="section">
 
-  <!-- TIME SELECTOR -->
-<!-- <view class="section1">
-  <view class="section__title"></view>
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view class="picker">
-     Date <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>
-       {{date}}
-    </view>
-  </picker>
-</view> -->
 
-<!-- AGE SELECTOR -->
-<!-- <view class="section2">
-  <view class="section__title"></view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      Age <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
-    </view>
-  </picker>
-</view> -->
 
-<!-- AREA SELECTOR -->
-<!-- <view class="section3">
-  <view class="section__title"></view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      District <image mode="aspectFit" class="icon-sm" src="../images/point-down.svg"></image>{{array[index]}}
-    </view>
-  </picker>
-</view> -->
 </view>
 
 <!-- CARDS SELECTOR-->
