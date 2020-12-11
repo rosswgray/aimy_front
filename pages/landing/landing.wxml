@@ -1,11 +1,11 @@
 <!--pages/landing/landing.wxml-->
 
-<view class="banner" style="background-image: url('https://aimy-photos.oss-cn-shanghai.aliyuncs.com/Launch-Screen.jpg')">
+<view class="banner" style="background-image: url('https://aimy-photos.oss-cn-shanghai.aliyuncs.com/dev-photos/Launch-Screen%20%282%29.jpg'); background-position: 10% 50%;background-repeat: no-repeat; background-size: 400px;">
   <view class="container">
     <view class="h1">
       <view>Connecting Families</view>
       <view>to Activities Nearby</view>
     </view>
-    <navigator bindtap="goToIndex" class="btn btn-flat" url="#">Enter</navigator>
+    <view bindtap="goToIndex" class="btn btn-flat" url="#">Enter</view>
   </view>
 </view>
