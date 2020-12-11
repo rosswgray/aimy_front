@@ -104,7 +104,8 @@
 }
 .card-info2 {
   display:flex;
-  flex-direction: column
+  flex-direction: column;
+  margin: 16rpx;
 }
 .activity-title-provider2{
   display: flex; 
