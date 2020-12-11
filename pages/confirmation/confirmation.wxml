@@ -1,51 +1,56 @@
 <!-- CONFIRMATION PAGE -->
-<view class="confirmation-h1">
-  <text>Confirm your Booking</text>
-</view>
-
-<view wx:for="{{activity.sessions}}" wx:for-item="session" >
-</view>
-
-<!-- ACTIVITY IMAGE -->
-<image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
-      placeholder="Child Development Activity" 
-      style="flex-shrink: 0;">
-</image>
-
-<!-- TITLE / INSTRUCTOR / DATE -->
-<view class="title-instructor-date">
-  <view class="activity-title">
-    <text>{{activity.title}}</text>
+<view class="page">
+  <view class="confirmation-h1">
+    <text>Confirm your Booking</text>
   </view>
-  <view class="provider-name">
-    <text>by {{activity.organizer.name}}</text>
+
+  <view wx:for="{{activity.sessions}}" wx:for-item="session" >
   </view>
-  <view  class="date">
-    <text>{{activity.date}}</text>
-  </view>
-</view>
+
+  <!-- ACTIVITY IMAGE -->
+  <image class="image" mode="aspectFill" src="{{activity.main_photo}}" 
+        placeholder="Child Development Activity" 
+        style="flex-shrink: 0;">
+  </image>
+
+  <view class="info-div">
+
+  <!-- TITLE / INSTRUCTOR / DATE -->
+    <view class="title-instructor-date">
+      <view class="activity-title">
+        <text>{{activity.title}}</text>
+      </view>
+      <view class="provider-name">
+        <text>by {{activity.organizer.name}}</text>
+      </view>
+      <view  class="date">
+        <text>{{activity.sessions.short_date}}</text>
+      </view>
+    </view>
 
 
-<!-- WHAT TO BRING -->
-<view class="what-to-bring">
-  <view class="bring-title">What to Bring</view>
-  <view wx:for="{{activity.requirements}}" wx:key="{{index}}">
-    <view>{{index + 1}}. {{item}}</view>
-  </view>
-</view>
+  <!-- WHAT TO BRING -->
+    <view class="what-to-bring">
+      <view class="bring-title">What to Bring</view>
+      <view wx:for="{{activity.requirements}}" wx:key="{{index}}">
+        <view>{{index + 1}}. {{item}}</view>
+      </view>
+    </view>
 
-<view class="cancellation">
-  <view class="can-title">Cancellation Policy</view>
-  <text class="please-read">PLEASE READ BEFORE BOOKING
-  </text>
-  <view class="cancellation-details">Cancellations less than one day prior to the activity’s scheduled start will forfeit the payment in it’s entirety.
-  </view>
-  <view class="important-expectations">Parents are expected to remain at the activity location throughtout it’s entirety.
-  </view>
-</view>
+    <view class="cancellation">
+      <view class="can-title">Cancellation Policy</view>
+      <text class="please-read">PLEASE READ BEFORE BOOKING
+      </text>
+      <view class="cancellation-details">Cancellations less than one day prior to the activity’s scheduled start will forfeit the payment in it’s entirety.
+      </view>
+      <view class="important-expectations">Parents are expected to remain at the activity location throughtout it’s entirety.
+      </view>
+    </view>
 
 
-<view class="button-div">
-  <button bindtap="goToShow" open-type="navigate" url="#" class="disagree-button">Disagree</button>
-  <button bindtap="createBooking" class="agree-button" style="margin-left: 30rpx;">Agree</button>
+    <view class="button-div">
+      <button bindtap="goToShow" open-type="navigate" url="#" class="disagree-button">Disagree</button>
+      <button bindtap="createBooking" class="agree-button" style="margin-left: 30rpx;">Agree</button>
+    </view>
+  </view>
 </view>
