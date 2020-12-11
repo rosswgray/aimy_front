@@ -20,10 +20,19 @@ Page({
       method: 'POST',
       data: {"session_id": this.data.session_id},
       success: res => {
-        wx.switchTab({ 
-          url: '/pages/profile/profile',
-          success: res => wx.showToast({title: "You're Booked!"})
-        });
+
+        console.log(res)
+        if (res.data.error == "already_booked") {
+          wx.showToast({
+            title: 'Already booked',
+            icon: "none"
+          })
+        } else {
+          wx.switchTab({ 
+            url: '/pages/profile/profile',
+            success: res => wx.showToast({title: "You're Booked!"})
+          });
+        }
       }
     })
   },
