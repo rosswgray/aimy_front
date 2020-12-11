@@ -117,11 +117,12 @@ Page({
 
   // GO TO BIO
   goToBio: function (event) {
+    console.log('wendyy', event)
+
+    const id = event.currentTarget.dataset.id
+
     wx.navigateTo({
-      url: '/pages/instructor/instructor',
-      success: (res) => {
-        res.eventChannel.emit('acceptData', { session: this.data.activeSession })
-      }
+      url: `/pages/instructor/instructor?id=${id}`
     })
   },
 

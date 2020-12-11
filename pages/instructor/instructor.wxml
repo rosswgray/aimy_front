@@ -2,9 +2,9 @@
 
 <view class="container-top">
   <view class="instructor-banner" style="background">
-      <image class="avatar-large" alt="avatar-large" src="{{session.instructor_pic}}"></image>
+      <image class="avatar-large" alt="avatar-large" src="{{instructor_pic}}"></image>
     <view class="instructor-name">
-      <view class="h1-name">{{session.instructor_name}}</view>
+      <view class="h1-name">{{name}}</view>
     </view>
   </view>
 </view>
@@ -14,9 +14,7 @@
     <view class="h1">About Me</view>
       <view class="p">
           <text> 
-              I have been swimming since I was a child and have always loved being in the water. Although I never had formal lessons myself, I joined the swim team in high school. After high school, I missed swimming so much that I decided to become a lifeguard.
-
-              Soon after becoming a lifeguard, I began teaching swim lessons and have continued to do so for the past several years. I teach swimming because I think it is a very important skill to have.
+              {{blurb}}
           </text>
       </view>
     </view>
