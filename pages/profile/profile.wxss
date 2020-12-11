@@ -10,10 +10,14 @@ page {
   justify-content: center;
   align-items: center;
 }
+.img-backgorund {
+  /* height: 30px;
+  width: 30px;  */
+}
 
 .avatar-large {
-  width: 200rpx;
-  height: 200rpx;
+  width: 164rpx;
+  height: 164rpx;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -119,7 +123,7 @@ page {
   justify-content: center;
 }
 .tabs-container {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   overflow-y: scroll;
   flex-direction: column;
