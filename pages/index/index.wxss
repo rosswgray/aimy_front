@@ -66,7 +66,7 @@ button {
   width: 88vw;
   height: 5vh;
   background-color: white;
-  padding-left: 10rpx;
+  padding-left: 30rpx;
   padding-top: 8rpx;
   padding-bottom: 8rpx;
 
@@ -82,6 +82,7 @@ button {
   height: 4.5vh;
   right: 14px;
   top: 5rpx;
+  margin-top: 8rpx;
   /* left: 83.93%;
   right: 3.73%;
   top: 168px;
