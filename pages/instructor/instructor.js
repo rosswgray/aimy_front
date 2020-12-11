@@ -1,4 +1,5 @@
 // pages/instructor/instructor.js
+const globalData = getApp().globalData
 Page({
 
   /**
@@ -14,21 +15,21 @@ Page({
     ]
   },
 
-    // goBack: function() {
-
-    // },
-
-
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
+    console.log('pwetty boii 26', options)
     const eventChannel = this.getOpenerEventChannel();
-    eventChannel.on('acceptData', (res) => {
-      this.setData({session: res.session});
+    wx.request({
+      url: `${globalData.host}api/v1/instructors/${options.id}`,
+      success: res=>{
+        console.log("getting instructor", res)
+        this.setData(res.data)
+      }
     })
+    
   },
 
+
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */

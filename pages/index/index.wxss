@@ -67,6 +67,8 @@ button {
   height: 5vh;
   background-color: white;
   padding-left: 10rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
 
 }
 
