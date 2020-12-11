@@ -74,27 +74,50 @@
   justify-content: space-between;
 }
 .container-heart-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .heart-div {
   display: flex;
-  padding-left: 20rpx;
+  padding-left: 40rpx;
 }
 
 .activity-heart {
   height: 45rpx;
   width: 45rpx;
-  margin-right: 10rpx;
-  padding-left: 20 rpx;
+  /* margin-right: 10rpx;
+  padding-left: 20 rpx; */
 }
 
 .date {
   font-size: 25rpx;
   font-weight: bold;
   margin-bottom: 10rpx;
+
 }
 
 .body {
   color: #979797;
   padding-right: 8px
+}
+.card-info2 {
+  display:flex;
+  flex-direction: column
+}
+.activity-title-provider2{
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.container-heart-date2 {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+
 }
