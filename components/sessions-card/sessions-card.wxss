@@ -5,6 +5,7 @@
   justify-content: space-between;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  min-height: 170rpx;
   width: 100%;
   margin-bottom: 35rpx;
   background-color: white;
@@ -16,17 +17,17 @@
  }
 
  .instructor-avatar {
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px ;
   box-shadow: grey;
   height: 100%;
-  width: 75px;
-}
+  width: 190rpx;
+ }
 
  .card-info {
    padding: 19rpx;
  }
 
- .provider-name {
+ .avtivity-title {
   font-size: 16px;
   color: #4A7FB0;
   font-weight: bolder;
@@ -35,20 +36,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 3rpx;
-  height: 33px;
-
+  height: 23px;
 }
-
- .date-time {
-   margin-top: 5px;
- }
-
- .date {
+ .avtivity-organizer {
   font-size: 28rpx;
   font-weight: bold;
   padding-right: 30rpx;
 }
 
+ .date-time {
+  font-size: 24rpx;
+  font-weight: lighter;
+  margin-bottom: 5rpx;
+}
 .time {
   font-size: 24rpx;
   font-weight: lighter;

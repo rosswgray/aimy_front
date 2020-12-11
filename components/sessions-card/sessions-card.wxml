@@ -9,11 +9,10 @@
       class="instructor-avatar" style="flex-shrink: 0;"></image>
     
     <view class="card-info">
-      <view class="date">{{activity.activity_title}}</view>
+      <view class="avtivity-title">{{activity.activity_title}}</view>
       <view class="date-time">
-     <view class="provider-name">{{activity.organizer_name}}</view>
-        
-    </view>
+     <view class="avtivity-organizer">{{activity.organizer_name}}</view>   
+     </view>
 
     </view>
   </view>
@@ -24,18 +23,18 @@
 <!-- BOOKING CARDS -->
 <block wx:else>
 <view data-id='{{activity.id}}' class="sessions-card">
+ 
   <view class="img-info" style="flex-shrink: 0;">
-
+      <!-- IMAGE -->
     <image mode="aspectFill" src="{{forProfile ? activity.session.instructor_pic : activity.instructor_pic}}" placeholder="Instructor Avatar" 
       class="instructor-avatar" style="flex-shrink: 0;"></image>
-    
-    <view class="card-info">
-      <view class="provider-name">{{ forProfile ? activity.activty_title : activity.instructor_name}}</view>
-      <view class="date-time">
-        <view class="date">{{forProfile ? activity.session.short_date : activity.short_date}}</view>
-        <view class="time">{{forProfile ? activity.session.start_time : activity.start_time}} - {{forProfile ? activity.session.end_time : activity.end_time}}</view>
-    </view>
-
+       <!-- CARD RIGHT -->
+        <view class="card-info">
+          <view class="avtivity-title">{{ forProfile ? activity.activty_title : activity.instructor_name}}</view>
+          <view class="date-time">
+            <view class="date">{{forProfile ? activity.session.short_date : activity.short_date}}</view>
+            <view class="time">{{forProfile ? activity.session.start_time : activity.start_time}} - {{forProfile ? activity.session.end_time : activity.end_time}}</view>
+        </view>
     </view>
   </view>
   <view class="right-box">
