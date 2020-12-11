@@ -13,13 +13,12 @@
 
 <!-- BOOKING BAR -->
 <view wx:if="{{user.hasInfo}}">
-<view class="tabs-container">
   <view class="tab-titles">
     <view class="tab-title {{activeTab == 0 ? 'active': ''}}" bindtap="switchTab" data-tab="0">My Bookings</view>
     <view class="tab-title {{activeTab == 1 ? 'active': ''}}" bindtap="switchTab" data-tab="1">My Favorites</view>
   </view>
 
-
+<view class="tabs-container">
   <view class="tab-page" wx:if="{{activeTab == 0}}">
     <view wx:if="{{bookings.length == 0}}">Make your first booking.</view>
     <view wx:for="{{bookings}}" wx:for-item="session" >
