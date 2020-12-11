@@ -49,7 +49,7 @@ Page({
       success: function(res) {
         console.log(res)
         const activities = res.data.activities
-        page.setData({ activities: activities.slice(0,20) })
+        page.setData({ activities: activities.slice(0,40) })
         // console.log(activities)
       }
       })
