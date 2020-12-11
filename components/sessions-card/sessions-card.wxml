@@ -9,9 +9,10 @@
       class="instructor-avatar" style="flex-shrink: 0;"></image>
     
     <view class="card-info">
-      <view class="provider-name">{{activity.organizer_name}}</view>
+      <view class="date">{{activity.activity_title}}</view>
       <view class="date-time">
-        <view class="date">{{activity.activity_title}}</view>
+     <view class="provider-name">{{activity.organizer_name}}</view>
+        
     </view>
 
     </view>

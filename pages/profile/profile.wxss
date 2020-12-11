@@ -119,7 +119,7 @@ page {
   justify-content: center;
 }
 .tabs-container {
-  height: 60vh;
+  height: 50vh;
   display: flex;
   overflow-y: scroll;
   flex-direction: column;
